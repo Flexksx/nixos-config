@@ -1,0 +1,1 @@
+cp ~/nixos-config/kitty/kitty.conf ~/.config/kitty/kitty.conf

@@ -1,0 +1,23 @@
+#battery {
+  background-color: @color2;
+  border-radius: 24px;
+  color: @color15;
+}
+.plugged {
+}
+.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}

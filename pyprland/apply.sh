@@ -1,0 +1,1 @@
+cp ~/nixos-config/pyprland/pyprland.toml ~/.config/hypr/pyprland.toml

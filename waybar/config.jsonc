@@ -1,0 +1,109 @@
+{
+  "layer": "top",
+  "modules-center": ["hyprland/workspaces"],
+  "modules-left": [
+    "hyprland/window",
+    "custom/separator",
+    "custom/mediaplayers"
+  ],
+  "modules-right": [
+    "wireplumber",
+    "temperature",
+    "cpu",
+    "battery",
+    "clock",
+    "custom/darkmode",
+    "tray"
+  ],
+  "margin-left": 15,
+  "margin-right": 15,
+  "margin-top": 5,
+  "reload_style_on_change": true,
+  "sway/window": {
+    "max-length": 50
+  },
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "clock": {
+    "format-alt": "{:%a, %d. %b  %H:%M}",
+    "tooltip-format": "<big>{:%Y %B \t   week: %V }</big>\n<tt>{calendar}</tt>"
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "{usage} % 💻"
+  },
+  "hyprland/workspaces": {
+    "sort": "default",
+    "all-outputs": true,
+    "format": "{id} {windows}",
+    "format-windows-separator": " ",
+    "window-rewrite-default": "",
+    "icons": ["", "", "", "", "", "", "", "", "", ""],
+    "click-left": "swaymsg workspace {name}",
+    "window-rewrite": {
+      // https://www.nerdfonts.com/cheat-sheet and https://fontawesome.com/icons
+      "class<org.telegram.desktop>": "",
+      "class<kitty>": "",
+      "class<kitty> title<.*top.*>": "",
+      "class<kitty> title<.*pacman.*>": "",
+      "class<com.github.weclaw1.ImageRoll|nomacs>": "",
+      "title<(.*[$%#] *)?nvim.*>": "",
+      "title<(.*[$%#] *)?([hb]|nv)top.*>": "",
+      "class<firefox>": "",
+      "class<discord>": "",
+      "title<Discord.*>": "",
+      "title<.[0-9]+. Discord.*>": " °",
+      "title<Signal>": "󰍡",
+      "title<(.* - )?(.[0-9]+. )?YouTube.*>": "",
+      "title<.* - Gmail .*>": "󰊫",
+      "class<obsidian>": "󱞁",
+      "class<ONLYOFFICE Desktop Editors>": "󰈙",
+      "class<calibre-.*>": "",
+      "class<org.qbittorrent.qBittorrent>": "",
+      "class<org.kde.kdeconnect.*>": "",
+      "class<mpv>": "",
+      "class<vlc>": "󰕼",
+      "class<Gimp-.*>": "",
+      "class<steam.*>": "󰓓", //  for FontAwesome
+      "class<steam> title<Friends List>": "",
+      "class<steam_app_[0-9]+>": "󰮂",
+      "title<Winetricks.*>": "󰡶",
+      "class<lutris>": "🦦",
+      "class<Spotify>": "",
+      "class<jetbrains-idea(-ce)?>": "",
+      "title<.*youtube.*>": "",
+      "class<Code>": "󰨞",
+      "class<com.obsproject.Studio|zoom>": "",
+      "class<io.github.whoozle.android-file-transfer>": "",
+      "class<(Chromium)|(Chrome)>": "",
+      "class<(slack|Slack)>": "󰒱",
+      "class<.*rgb.*>": ""
+    }
+  },
+  "hyprland/window": {
+    "icon": true,
+    "format": "{title}",
+    "max-length": 30
+  },
+  "custom/darkmode": {
+    // "format": " 🌕 ",
+    "exec": "gsettings get org.gnome.desktop.interface color-scheme | grep -q 'dark' && echo '🌕' || echo '☀️'",
+    "interval": 10,
+    "on-click": "~/nixos-config/waybar/scripts/darkmode.sh",
+    "on-click-right": "~/nixos-config/waybar/scripts/lightmode.sh"
+  },
+  "custom/mediaplayers": {
+    "exec": "python3 /home/flexksx/nixos-config/waybar/scripts/mediaplayer.py",
+    "format": "󰕾 {} ",
+    "max-length": 30,
+    "return-type": "json",
+    "on-click": "playerctl play-pause"
+  },
+  "custom/separator": {
+    "format": "\uE0B0",
+    "interval": "once",
+    "tooltip": false
+  }
+}
