@@ -8,31 +8,47 @@
   pkgs,
   ...
 }:
-let
-  fonts = import ./fonts.nix { inherit pkgs; };
-  nvidia = import ./nvidia.nix { inherit config lib pkgs; };
-in
+# let
+#   fonts = import ./fonts.nix { inherit pkgs; };
+#   nvidia = import ./nvidia.nix { inherit config lib pkgs; };
+#   sound = import ./sound.nix { inherit pkgs; };
+#   razer = import ./razer.nix { inherit config lib pkgs; };
+#   system_packages = import ./system_packages.nix { inherit config lib pkgs; };
+# in
 {
   imports = [
     # Include the results of the hardware scan.
     # <nixos-hardware/asus/rog-strix/g513im>
     <home-manager/nixos>
     ./hardware-configuration.nix
+    ./rgb/openrgb.nix
+    ./rgb/razer.nix
+    ./nvidia/nvidia.nix
+    ./system_packages.nix
+    ./sound.nix
+    ./fonts.nix
+    ./users/users.nix
+    ./terminal/zsh.nix
+    ./services/auto-cpufreq.nix
+    # ./terminal/kitty.nix
   ];
-  fonts = fonts.fonts;
-  hardware.opengl = nvidia.hardware.opengl;
-  services.xserver.videoDrivers = nvidia.services.xserver.videoDrivers;
-  hardware.nvidia = nvidia.hardware.nvidia;
+  # fonts = fonts.fonts;
+  # hardware.opengl = nvidia.hardware.opengl;
+  # services.xserver.videoDrivers = nvidia.services.xserver.videoDrivers;
+  # hardware.nvidia = nvidia.hardware.nvidia;
+  # hardware.razer = razer.hardware.razer;
+  # services.pipewire = sound.services.pipewire;
+  # environment.systemPackages = system_packages.environment.systemPackages;
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
-  # time.timeZone = "Europe/Amsterdam";
+  time.timeZone = "Europe/Chisinau";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -56,13 +72,6 @@ in
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound.
-  # hardware.pulseaudio.enable = true;
-  # OR
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
   services.supergfxd.enable = true;
   services = {
     asusd = {
@@ -83,17 +92,7 @@ in
     };
   };
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.flexksx = {
-    isNormalUser = true;
-    extraGroups = [
-      "wheel"
-      "networkmanager"
-    ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      firefox
-      tree
-    ];
-  };
+
   xdg.portal = {
     enable = true;
     wlr.enable = true;
@@ -132,64 +131,6 @@ in
     '';
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    google-chrome
-    xdg-user-dirs
-    kitty
-    polkit
-    firefox
-    git
-    ranger
-    waybar
-    killall
-    cmatrix
-    lolcat
-    htop
-    btop
-    lxqt.lxqt-policykit
-    lm_sensors
-    nixfmt-rfc-style
-    unzip
-    unrar
-    libnotify
-    wl-clipboard
-    pciutils
-    ffmpeg
-    socat
-    cowsay
-    lshw
-    bat
-    pkg-config
-    meson
-    hyprpicker
-    ninja
-    brightnessctl
-    appimage-run
-    networkmanagerapplet
-    playerctl
-    discord
-    swww
-    grim
-    slurp
-    swaynotificationcenter
-    imv
-    mpv
-    gimp
-    pavucontrol
-    greetd.tuigreet
-    neofetch
-    wallust
-    vscode
-    rofi-wayland
-    telegram-desktop
-    slack
-    spotify
-  ];
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -197,6 +138,7 @@ in
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
   programs.git.config = {
     user.name = "Flexksx";
     user.email = "cristian.cretu2808@gmail.com";
@@ -217,7 +159,9 @@ in
   # networking.firewall.enable = false;
 
   # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
+  # (/run/current-system/configuration.nix). Th# system_packages.nix
+
+  # Is is useful in case you
   # accidentally delete configuration.nix.
   # system.copySystemConfiguration = true;
 

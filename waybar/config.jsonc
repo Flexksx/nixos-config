@@ -91,8 +91,8 @@
     // "format": " 🌕 ",
     "exec": "gsettings get org.gnome.desktop.interface color-scheme | grep -q 'dark' && echo '🌕' || echo '☀️'",
     "interval": 10,
-    "on-click": "~/nixos-config/waybar/scripts/darkmode.sh",
-    "on-click-right": "~/nixos-config/waybar/scripts/lightmode.sh"
+    "on-click": "/home/flexksx/nixos-config/waybar/scripts/darkmode.sh",
+    "on-click-right": "/home/flexksx/nixos-config/waybar/scripts/lightmode.sh"
   },
   "custom/mediaplayers": {
     "exec": "python3 /home/flexksx/nixos-config/waybar/scripts/mediaplayer.py",
