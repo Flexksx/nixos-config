@@ -17,11 +17,26 @@
     lolcat
     htop
     btop
+    nodejs
     android-studio
+    openjdk17
     lxqt.lxqt-policykit
     lm_sensors
+    blueman
+    bluez
     xdg-desktop-portal
+    pass
+    flutter
+    dart
+    clang
+    cmake
+    xdg-desktop-portal-gnome
     hyprpaper
+    kdeconnect
+    python3
+    python3Packages.pip
+    poetry
+    gsettings-desktop-schemas
     nixfmt-rfc-style
     unzip
     unrar
@@ -29,6 +44,8 @@
     glib
     wl-clipboard
     openrgb-with-all-plugins
+    gnupg
+    pinentry
     pciutils
     ffmpeg
     socat

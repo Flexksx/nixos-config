@@ -12,6 +12,7 @@
       "wheel"
       "networkmanager"
       "openrazer"
+      "adbusers"
     ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       firefox

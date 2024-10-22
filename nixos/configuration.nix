@@ -8,13 +8,7 @@
   pkgs,
   ...
 }:
-# let
-#   fonts = import ./fonts.nix { inherit pkgs; };
-#   nvidia = import ./nvidia.nix { inherit config lib pkgs; };
-#   sound = import ./sound.nix { inherit pkgs; };
-#   razer = import ./razer.nix { inherit config lib pkgs; };
-#   system_packages = import ./system_packages.nix { inherit config lib pkgs; };
-# in
+
 {
   imports = [
     # Include the results of the hardware scan.
@@ -30,32 +24,72 @@
     ./users/users.nix
     ./terminal/zsh.nix
     ./services/auto-cpufreq.nix
+    ./git/git.nix
+    ./nix/nix.nix
     # ./terminal/kitty.nix
   ];
-  # fonts = fonts.fonts;
-  # hardware.opengl = nvidia.hardware.opengl;
-  # services.xserver.videoDrivers = nvidia.services.xserver.videoDrivers;
-  # hardware.nvidia = nvidia.hardware.nvidia;
-  # hardware.razer = razer.hardware.razer;
-  # services.pipewire = sound.services.pipewire;
-  # environment.systemPackages = system_packages.environment.systemPackages;
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
+  programs.thunar = {
+    enable = true;
+    plugins = with pkgs.xfce; [
+      thunar-archive-plugin
+      thunar-media-tags-plugin
+      thunar-volman
+    ];
+  };
+  services.gvfs.enable = true; # Mount, trash, and other functionalities
+  services.tumbler.enable = true; # Thumbnail support for images
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true;
+      };
+    };
+  };
+  systemd.user.services.mpris-proxy = {
+    description = "Mpris proxy";
+    after = [
+      "network.target"
+      "sound.target"
+    ];
+    wantedBy = [ "default.target" ];
+    serviceConfig.ExecStart = "${pkgs.bluez}/bin/mpris-proxy";
+  };
+  services.blueman.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
-
+  programs = {
+    adb.enable = true;
+  };
   # Set your time zone.
   time.timeZone = "Europe/Chisinau";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
+  networking.firewall = {
+    enable = true;
+    allowedTCPPortRanges = [
+      {
+        from = 1714;
+        to = 1764;
+      } # KDE Connect
+    ];
+    allowedUDPPortRanges = [
+      {
+        from = 1714;
+        to = 1764;
+      } # KDE Connect
+    ];
+  };
   # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
   # console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
@@ -107,6 +141,30 @@
     ];
   };
 
+  services.gnome.gnome-keyring.enable = true;
+  home-manager.users.flexksx = {
+    home.stateVersion = "24.05"; # or use the latest version based on your setup
+
+    home.pointerCursor = {
+      name = "Adwaita";
+      package = pkgs.gnome.adwaita-icon-theme;
+      size = 24;
+      x11 = {
+        enable = true;
+        defaultCursor = "Adwaita";
+      };
+    };
+  };
+
+  system.userActivationScripts = {
+    stdio = {
+      text = ''
+        rm -f ~/Android/Sdk/platform-tools/adb
+        ln -s /run/current-system/sw/bin/adb ~/Android/Sdk/platform-tools/adb
+      '';
+      deps = [ ];
+    };
+  };
   security.rtkit.enable = true;
   security.polkit.enable = true;
   security.polkit.extraConfig = ''
