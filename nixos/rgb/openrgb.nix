@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
+let
+  openrgbRules = builtins.readFile ./60-openrgb.rules; # Directly read file
+in
 {
-  services.hardware.openrgb.enable = true;
-  environment.systemPackages = with pkgs; [ openrgb-with-all-plugins ];
+  boot.kernelModules = [
+    "i2c-dev"
+    "i2c-piix4"
+  ];
+  services.udev.extraRules = builtins.toString openrgbRules; # Just read file content
 }

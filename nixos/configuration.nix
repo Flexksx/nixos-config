@@ -8,7 +8,6 @@
   pkgs,
   ...
 }:
-
 {
   imports = [
     # Include the results of the hardware scan.
@@ -26,8 +25,10 @@
     ./services/auto-cpufreq.nix
     ./git/git.nix
     ./nix/nix.nix
+    ./programs/hyprland/hyprland.nix
     # ./terminal/kitty.nix
   ];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   programs.thunar = {
@@ -38,6 +39,8 @@
       thunar-volman
     ];
   };
+  services.udev.packages = [ pkgs.android-udev-rules ];
+
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
   hardware.bluetooth = {
@@ -49,6 +52,8 @@
       };
     };
   };
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [ ];
   systemd.user.services.mpris-proxy = {
     description = "Mpris proxy";
     after = [
@@ -90,20 +95,7 @@
   };
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
 
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
-  # Enable CUPS to print documents.
   services.printing.enable = true;
 
   services.supergfxd.enable = true;
@@ -156,15 +148,6 @@
     };
   };
 
-  system.userActivationScripts = {
-    stdio = {
-      text = ''
-        rm -f ~/Android/Sdk/platform-tools/adb
-        ln -s /run/current-system/sw/bin/adb ~/Android/Sdk/platform-tools/adb
-      '';
-      deps = [ ];
-    };
-  };
   security.rtkit.enable = true;
   security.polkit.enable = true;
   security.polkit.extraConfig = ''
@@ -197,11 +180,6 @@
   #   enableSSHSupport = true;
   # };
 
-  programs.git.config = {
-    user.name = "Flexksx";
-    user.email = "cristian.cretu2808@gmail.com";
-  };
-  programs.hyprland.enable = true;
   programs.neovim = {
     enable = true;
   };

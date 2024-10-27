@@ -14,27 +14,29 @@
     waybar
     killall
     cmatrix
+    postman
     lolcat
     htop
     btop
     nodejs
-    android-studio
     openjdk17
     lxqt.lxqt-policykit
     lm_sensors
+    fh
     blueman
     bluez
     xdg-desktop-portal
+    qbittorrent
+    vlc
+    clementine
     pass
-    flutter
-    dart
+    cbonsai
+    android-studio
     clang
     cmake
     xdg-desktop-portal-gnome
     hyprpaper
     kdeconnect
-    python3
-    python3Packages.pip
     poetry
     gsettings-desktop-schemas
     nixfmt-rfc-style
