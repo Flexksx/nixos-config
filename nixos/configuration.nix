@@ -13,6 +13,7 @@
     # Include the results of the hardware scan.
     # <nixos-hardware/asus/rog-strix/g513im>
     <home-manager/nixos>
+    ./home-manager/home-manager.nix
     ./hardware-configuration.nix
     ./rgb/openrgb.nix
     ./rgb/razer.nix
@@ -134,19 +135,6 @@
   };
 
   services.gnome.gnome-keyring.enable = true;
-  home-manager.users.flexksx = {
-    home.stateVersion = "24.05"; # or use the latest version based on your setup
-
-    home.pointerCursor = {
-      name = "Adwaita";
-      package = pkgs.gnome.adwaita-icon-theme;
-      size = 24;
-      x11 = {
-        enable = true;
-        defaultCursor = "Adwaita";
-      };
-    };
-  };
 
   security.rtkit.enable = true;
   security.polkit.enable = true;

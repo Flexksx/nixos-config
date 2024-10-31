@@ -6,6 +6,7 @@
     wget
     google-chrome
     xdg-user-dirs
+    home-manager
     kitty
     polkit
     firefox
@@ -18,6 +19,7 @@
     lolcat
     htop
     btop
+    rhythmbox
     nodejs
     openjdk17
     lxqt.lxqt-policykit
@@ -36,7 +38,12 @@
     cmake
     xdg-desktop-portal-gnome
     hyprpaper
+    libreoffice-qt
+    hunspell
+    hunspellDicts.uk_UA
+    hunspellDicts.th_TH
     kdeconnect
+    cava
     poetry
     gsettings-desktop-schemas
     nixfmt-rfc-style

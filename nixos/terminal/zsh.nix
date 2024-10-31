@@ -9,6 +9,10 @@
     autosuggestions = {
       enable = true;
     };
+    shellAliases = {
+      pls = "sudo";
+      update = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch -I nixos-config=/home/flexksx/nixos-config/nixos/configuration.nix";
+    };
     ohMyZsh = {
       enable = true;
       # theme = "powerlevel10k/powerlevel10k";

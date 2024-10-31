@@ -14,7 +14,7 @@
       charger = {
         governor = "performance";
         energy_performance_preference = "performance";
-        platform_profile = "balanced";
+        platform_profile = "performance";
         turbo = "never";
       };
       battery = {
