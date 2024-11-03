@@ -1,4 +1,3 @@
-#!/bin/bash
 
 # Directory containing the subdirectories
 PARENT_DIRECTORY="/home/flexksx/nixos-config/backrgrounds"
