@@ -11,7 +11,7 @@
     };
     shellAliases = {
       pls = "sudo";
-      update = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch -I nixos-config=/home/flexksx/nixos-config/nixos/configuration.nix";
+      update = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --flake /home/flexksx/nixos-config/nixos#nixos";
     };
     ohMyZsh = {
       enable = true;

@@ -1,3 +1,7 @@
+# pkgs/default.nix
+{ pkgs, ... }:
+
 {
-  # example = pkgs.callPackage ./example { };
+  # Define example package here using callPackage
+  example = pkgs.callPackage ./example { };
 }

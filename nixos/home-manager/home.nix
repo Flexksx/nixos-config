@@ -1,23 +1,13 @@
 {
   inputs,
+  outputs,
   config,
   lib,
   pkgs,
   ...
 }:
 {
-  imports = [ ];
-  nixpkgs = {
-    overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.unstable-packages
-    ];
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = _: true;
-    };
-  };
+  imports = [ inputs.ags.homeManagerModules.default ];
   home = {
     username = "flexksx";
     homeDirectory = "/home/flexksx";
@@ -26,4 +16,13 @@
   systemd.user.startServices = "sd-switch";
   programs.home-manager.enable = true;
   programs.git.enable = true;
+  programs.ags = {
+    enable = true;
+    configDir = ../../ags;
+    extraPackages = with pkgs; [
+      gtksourceview
+      webkitgtk
+      accountsservice
+    ];
+  };
 }

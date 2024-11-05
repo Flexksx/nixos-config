@@ -17,7 +17,6 @@
     cmatrix
     postman
     lolcat
-    htop
     btop
     rhythmbox
     nodejs
@@ -28,7 +27,7 @@
     blueman
     bluez
     xdg-desktop-portal
-    qbittorrent
+    fragments
     vlc
     clementine
     pass
