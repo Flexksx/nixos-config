@@ -1,24 +1,27 @@
-# This file defines overlays
 { inputs, ... }:
+
 {
-  # This one brings our custom packages from the 'pkgs' directory
   additions = final: prev: import ../pkgs { pkgs = prev; };
 
-  # This one contains whatever you want to overlay
-  # You can change versions, add patches, set compilation flags, anything really.
-  # https://nixos.wiki/wiki/Overlays
-  modifications = final: prev: {
-    # example = prev.example.overrideAttrs (oldAttrs: rec {
-    # ...
-    # });
-  };
+  modifications = final: prev: { };
 
-  # When applied, the unstable nixpkgs set (declared in the flake inputs) will
-  # be accessible through 'pkgs.unstable'
-  unstable-packages = final: _prev: {
+  # Define the overlay to include openrazer-daemon directly from unstable
+  unstable-packages = final: prev: {
     unstable = import inputs.nixpkgs-unstable {
       system = final.system;
       config.allowUnfree = true;
     };
+
+    # Make openrazer-daemon accessible directly in the overlay
+    openrazer-daemon = final.unstable.openrazer-daemon.overrideAttrs (oldAttrs: rec {
+      version = "3.9.0"; # Set the desired version
+
+      src = final.fetchFromGitHub {
+        owner = "openrazer";
+        repo = "openrazer";
+        rev = "v3.9.0";
+        sha256 = "MLwhqLPWdjg1ZUZP5Sig37RgZEeHlU+DyELpyMif6iY=";
+      };
+    });
   };
 }

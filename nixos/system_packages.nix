@@ -16,10 +16,11 @@
     killall
     cmatrix
     postman
+    lxappearance
     lolcat
     btop
     rhythmbox
-    nodejs
+    nodejs-18_x
     openjdk17
     lxqt.lxqt-policykit
     lm_sensors
@@ -41,7 +42,6 @@
     hunspell
     hunspellDicts.uk_UA
     hunspellDicts.th_TH
-    kdeconnect
     cava
     poetry
     gsettings-desktop-schemas
@@ -61,6 +61,9 @@
     lshw
     bat
     pkg-config
+    p7zip
+    gnome.file-roller
+    zip
     meson
     hyprpicker
     ninja

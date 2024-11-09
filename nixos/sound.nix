@@ -11,4 +11,5 @@
     pulse.enable = true;
     alsa.enable = true;
   };
+  environment.systemPackages = with pkgs; [ pkgs.easyeffects ];
 }

@@ -13,3 +13,10 @@ STYLE_PATH='/home/flexksx/nixos-config/waybar/style.css'
 content=$(cat "$STYLE_PATH")
 echo "$content" | tee "$STYLE_PATH" > /dev/null
 echo "Copied light mode style to waybar/style.css"
+echo "Writing wallpaper path to active wallpaper file"
+echo $BG > /home/flexksx/nixos-config/waybar/scripts/active_wallpaper_path.txt
+HYPRLOCK_CONFIG_PATH='/home/flexksx/nixos-config/hyprland/hyprlock.conf'
+
+# Update the wallpaper path in the Hyprlock config file
+sed -i "s|path = .*|path = $BG|g" "$HYPRLOCK_CONFIG_PATH"
+echo "Updated Hyprlock config with new wallpaper path"

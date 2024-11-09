@@ -12,7 +12,8 @@
 
   environment.systemPackages = with pkgs; [
     openrazer-daemon
-    polychromatic
+    # polychromatic
+    unstable.polychromatic
   ];
 
 }

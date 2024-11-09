@@ -25,4 +25,5 @@
       accountsservice
     ];
   };
+  programs.hyprlock.enable = true;
 }
