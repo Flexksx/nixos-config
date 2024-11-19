@@ -9,6 +9,7 @@
     home-manager
     kitty
     polkit
+    nwg-look
     firefox
     git
     ranger
