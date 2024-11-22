@@ -11,8 +11,6 @@
 
 /* Overall Waybar styling */
 window#waybar {
-  background-color: @color14Alpha;
-  color: @color14;
   min-height: 30px;
   transition-property: background-color;
   transition-duration: 0.5s;

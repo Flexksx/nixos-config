@@ -22,6 +22,7 @@
     btop
     rhythmbox
     nodejs-18_x
+    mpvpaper
     openjdk17
     lxqt.lxqt-policykit
     lm_sensors

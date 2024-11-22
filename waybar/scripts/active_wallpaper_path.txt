@@ -1,1 +1,1 @@
-/home/flexksx/nixos-config/backrgrounds/light/AbstractBlue.jpg
+/home/flexksx/nixos-config/backrgrounds/light/Beach.jpg
