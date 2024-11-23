@@ -7,11 +7,15 @@
   ...
 }:
 {
-  imports = [ inputs.ags.homeManagerModules.default ];
+  imports = [
+    inputs.ags.homeManagerModules.default
+    inputs.walker.homeManagerModules.default
+  ];
   home = {
     username = "flexksx";
     homeDirectory = "/home/flexksx";
     stateVersion = "24.05";
+    packages = with pkgs; [ themix-gui ];
   };
   systemd.user.startServices = "sd-switch";
   programs.home-manager.enable = true;
@@ -23,7 +27,14 @@
       gtksourceview
       webkitgtk
       accountsservice
+      fzf
+      inputs.ags.packages.${pkgs.system}.battery
+      inputs.ags.packages.${pkgs.system}.hyprland
     ];
+  };
+  programs.walker = {
+    enable = true;
+    runAsService = true;
   };
   programs.neovim = {
     enable = true;

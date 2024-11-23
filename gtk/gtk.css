@@ -1,0 +1,24 @@
+@import url("file:///home/flexksx/.config/wallust/templates/colors-gtk3.css");
+
+/* Example for background and foreground usage */
+* {
+  background-color: @background;
+  color: @foreground;
+}
+
+/* Specific widgets customization */
+button {
+  background-color: @color1;
+  color: @foreground;
+}
+
+entry,
+textview {
+  background-color: @background;
+  color: @foreground;
+}
+
+headerbar {
+  background-color: @color3;
+  color: @foreground;
+}
