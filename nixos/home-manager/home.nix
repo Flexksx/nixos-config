@@ -42,7 +42,13 @@
     vimAlias = true;
     withPython3 = true;
     withNodeJs = true;
+    extraConfig = ''
+      set runtimepath+=~/nixos-config/neovim
+    '';
+
   };
+
+  xdg.configFile.nvim.source = ../../neovim;
   programs.hyprlock.enable = true;
   gtk = {
     enable = true;
