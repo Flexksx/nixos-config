@@ -24,7 +24,7 @@
     nodejs-18_x
     mpvpaper
     openjdk17
-
+    jq
     lxqt.lxqt-policykit
     lm_sensors
     fh
