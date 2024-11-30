@@ -3,10 +3,11 @@ import { Variable } from "astal"
 import Hyprland from "gi://AstalHyprland";
 const hyprland = Hyprland.get_default();
 import Workspaces from "./hyprland/workspaces/Workspaces";
-import HyprlandActiveClient from "./hyprland/client/HyprlandActiveClient";
+import CpuUsage from "./system/CpuUsage";
 
 
 const time = Variable("").poll(1000, "date")
+
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
     return <window
@@ -17,14 +18,14 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
             | Astal.WindowAnchor.LEFT
             | Astal.WindowAnchor.RIGHT}
         application={App}>
-        <centerbox>
-            <HyprlandActiveClient hyprlandClient={hyprland} /> 
+        <box>
             <Workspaces hyprlandClient={hyprland} />
             <button
                 onClick={() => print("hello")}
                 halign={Gtk.Align.CENTER} >
                 <label label={time()} />
             </button>
-        </centerbox>
+            <CpuUsage />
+        </box>
     </window>
 }

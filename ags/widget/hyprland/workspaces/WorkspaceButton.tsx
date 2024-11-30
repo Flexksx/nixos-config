@@ -1,4 +1,5 @@
 import Hyprland from "gi://AstalHyprland";
+import { bind } from "../../../../../.local/share/ags";
 
 const getClientIcon = (
   clientsIconsRegex: Map<string, string>,
@@ -21,9 +22,17 @@ export default function WorkspaceButton({
   workspace,
   clientsIconsRegex,
 }: WorkspaceButtonProps) {
-  const clients = workspace.get_clients();
-  const icons = clients
-    .map((client) => getClientIcon(clientsIconsRegex, client))
-    .join(" ");
-  return <button onClick={() => workspace.focus()}>{icons}</button>;
+  return <box className = "workspaceButton">
+    {bind(workspace, "clients").as((clients) => {
+      const icons = clients
+        .map((client) => getClientIcon(clientsIconsRegex, client))
+        .join(" ");
+      const workspaceNumber = workspace.get_id();
+      return (
+        <button onClick={() => workspace.focus()}>
+          {workspaceNumber + " " + icons}
+        </button>
+      );
+    })}
+  </box>
 }

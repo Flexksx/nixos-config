@@ -9,13 +9,16 @@ window.Bar {
 
     >centerbox {
         background: #{$theme_bg_color};
-        border-radius: 10px;
-        margin: 8px;
+        border-radius: 0px 0px 24px 24px;
     }
 
     button {
         border-radius: 8px;
         margin: 2px;
     }
+   
+
 }
+
+
 

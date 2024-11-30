@@ -15,7 +15,12 @@
     username = "flexksx";
     homeDirectory = "/home/flexksx";
     stateVersion = "24.05";
-    packages = with pkgs; [ themix-gui ];
+    packages = with pkgs; [
+      themix-gui
+      spotify-player
+      bastet
+      hyprland-autoname-workspaces
+    ];
   };
   systemd.user.startServices = "sd-switch";
   programs.home-manager.enable = true;

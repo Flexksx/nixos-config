@@ -82,7 +82,7 @@
     powerOnBoot = true;
     settings = {
       General = {
-        Experimental = true;
+        Enable = "Source,Sink,Media,Socket";
       };
     };
   };
@@ -99,10 +99,8 @@
   };
   services.blueman.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  networking.hostName = "nixos"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  networking.hostName = "nixos";
+  networking.networkmanager.enable = true;
   programs = {
     adb.enable = true;
   };
