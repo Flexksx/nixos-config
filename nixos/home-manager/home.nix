@@ -16,12 +16,12 @@
     homeDirectory = "/home/flexksx";
     stateVersion = "24.05";
     packages = with pkgs; [
-      themix-gui
       spotify-player
       bastet
       hyprland-autoname-workspaces
     ];
   };
+
   systemd.user.startServices = "sd-switch";
   programs.home-manager.enable = true;
   programs.git.enable = true;
@@ -37,10 +37,10 @@
       inputs.ags.packages.${pkgs.system}.hyprland
     ];
   };
-  programs.walker = {
-    enable = true;
-    runAsService = true;
-  };
+  # programs.walker = {
+  #   enable = true;
+  #   runAsService = true;
+  # };
   programs.neovim = {
     enable = true;
     viAlias = true;

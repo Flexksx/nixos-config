@@ -13,7 +13,9 @@
     firefox
     git
     ranger
+    gnumake
     waybar
+    python312
     killall
     cmatrix
     postman
@@ -65,7 +67,7 @@
     bat
     pkg-config
     p7zip
-    gnome.file-roller
+    file-roller
     zip
     meson
     hyprpicker

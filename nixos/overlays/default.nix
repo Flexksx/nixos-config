@@ -12,16 +12,16 @@
       config.allowUnfree = true;
     };
 
-    # Make openrazer-daemon accessible directly in the overlay
-    openrazer-daemon = final.unstable.openrazer-daemon.overrideAttrs (oldAttrs: rec {
-      version = "3.9.0"; # Set the desired version
+  };
 
-      src = final.fetchFromGitHub {
-        owner = "openrazer";
-        repo = "openrazer";
-        rev = "v3.9.0";
-        sha256 = "MLwhqLPWdjg1ZUZP5Sig37RgZEeHlU+DyELpyMif6iY=";
-      };
-    });
+  # Add Nixmox overlay to expose its packages and plugins
+  nixmox-overlay = final: prev: {
+    # Import the Nixmox overlay
+    nixmox = import inputs.nixmox.overlay final prev;
+
+    # Expose Nixmox packages for convenience
+    oomox = final.nixmox.packages.${final.system}.oomox;
+    oomoxFull = final.nixmox.packages.${final.system}.oomoxFull;
+    oomoxPlugins = final.nixmox.packages.${final.system}.oomoxPlugins;
   };
 }
