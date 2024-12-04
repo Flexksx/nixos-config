@@ -1,4 +1,5 @@
-@import url("file:///home/flexksx/.config/wallust/templates/colors-gtk3.css");
+/* @import url("file:///home/flexksx/.config/wallust/templates/colors-gtk3.css"); */
+@import url("colors.css");
 @import url("file:///home/flexksx/nixos-config/waybar/modules-right/modules-right-import.css");
 @import url("file:///home/flexksx/nixos-config/waybar/modules-center/modules-center-import.css");
 @import url("file:///home/flexksx/nixos-config/waybar/modules-left/modules-left-import.css");

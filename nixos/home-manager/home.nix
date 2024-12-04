@@ -14,7 +14,7 @@
   home = {
     username = "flexksx";
     homeDirectory = "/home/flexksx";
-    stateVersion = "24.05";
+    stateVersion = "24.11";
     packages = with pkgs; [
       spotify-player
       bastet

@@ -83,10 +83,12 @@ palette = "dark"
 # target: Absolute path in which to place a file with generated templated values
 # NOTE: prefer '' over "" for paths, avoids escaping.
 #zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
-colors-kitty = { template = 'colors-kitty.conf', target = '~/.config/wallust/templates/colors-kitty.conf' }
-colors_gtk3 = { template = 'colors-gtk3.css', target = '~/.config/wallust/templates/colors-gtk3.css' }
-colors_hyprland = { template = 'colors-hyprland.css', target = '~/.config/wallust/templates/colors-hyprland.css' }
-colors_rofi_dark_rasi = { template = 'colors-rofi-dark.rasi', target = '~/.config/wallust/templates/colors-rofi-dark.rasi' }
+colors-kitty = { src = 'colors-kitty.conf', dst = '~/.config/wallust/dist/colors-kitty.conf' }
+colors-gtk3 = { src = 'colors-gtk3.css', dst = '~/.config/wallust/dist/colors-gtk3.css' }
+waybar-colors = { src = 'waybar-colors.css', dst = '~/nixos-config/waybar/colors.css' }
+colors-hyprland = { src = 'colors-hyprland.css', dst = '~/.config/wallust/dist/colors-hyprland.css' }
+hyprland-borders = { src = 'hyprland-borders.conf', dst = '~/nixos-config/hyprland/hyprland-borders.conf' }
+colors-rofi_dark_rasi = { src = 'colors-rofi-dark.rasi', dst = '~/.config/wallust/dist/colors-rofi-dark.rasi' }
 # colors_gtk3 = { template = 'colors-gtk3.css', target = '~/nixos-config/wal/templates/colors-gtk3.css' }
 # colors_hyprland = { template = 'colors-hyprland.css', target = '~nixos-config/wal/templates/colors-hyprland.css' }
 # colors-rofi-dark.rasi = { template = 'colors-rofi-dark.rasi', target = '~/nixos-config/wal/templates/colors-rofi-dark.rasi' }

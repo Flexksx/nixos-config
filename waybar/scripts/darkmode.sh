@@ -7,7 +7,7 @@ hyprctl hyprpaper wallpaper ", $BG"
 
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 # wal -i $BG --saturate 0.4 --cols16 darken
-wallust "$BG" --palette softdark16
+wallust run "$BG" --palette softdark16
 
 STYLE_PATH='/home/flexksx/nixos-config/waybar/style.css'
 content=$(cat "$STYLE_PATH")

@@ -1,4 +1,4 @@
-@import url("file:///home/flexksx/.config/wallust/templates/colors-gtk3.css");
+@import url("file:///home/flexksx/nixos-config/waybar/colors.css");
 
 #clock {
   background-color: @color2;
