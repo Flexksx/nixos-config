@@ -9,11 +9,15 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
     nixmox.url = "github:Sorixelle/nixmox";
+    mcmojave-hyprcursor.url = "github:libadoxon/mcmojave-hyprcursor";
 
+    matugen = {
+      url = "github:/InioX/Matugen";
+    };
     walker.url = "github:abenz1267/walker";
     # Home manager
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ags.url = "github:Aylur/ags";
@@ -83,6 +87,7 @@
             # > Our main home-manager configuration file <
             ./home-manager/home.nix
           ];
+
         };
       };
     };

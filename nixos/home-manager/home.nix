@@ -18,8 +18,15 @@
     packages = with pkgs; [
       spotify-player
       bastet
+      themix-gui
+      resonance
+      inputs.matugen.packages.${system}.default
+      inputs.mcmojave-hyprcursor.packages.${pkgs.stdenv.hostPlatform.system}.default
       hyprland-autoname-workspaces
     ];
+    sessionVariables = {
+      HYPRCURSOR_THEME = "McMojave";
+    };
   };
 
   systemd.user.startServices = "sd-switch";
@@ -37,10 +44,7 @@
       inputs.ags.packages.${pkgs.system}.hyprland
     ];
   };
-  # programs.walker = {
-  #   enable = true;
-  #   runAsService = true;
-  # };
+
   programs.neovim = {
     enable = true;
     viAlias = true;

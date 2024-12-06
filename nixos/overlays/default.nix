@@ -13,7 +13,6 @@
     };
 
   };
-
   # Add Nixmox overlay to expose its packages and plugins
   nixmox-overlay = final: prev: {
     # Import the Nixmox overlay
