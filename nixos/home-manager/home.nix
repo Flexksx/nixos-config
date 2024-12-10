@@ -58,6 +58,7 @@
   };
 
   xdg.configFile.nvim.source = ../../neovim;
+
   programs.hyprlock.enable = true;
   gtk = {
     enable = true;
