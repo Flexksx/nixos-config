@@ -97,6 +97,9 @@
     wantedBy = [ "default.target" ];
     serviceConfig.ExecStart = "${pkgs.bluez}/bin/mpris-proxy";
   };
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   services.blueman.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   networking.hostName = "nixos";

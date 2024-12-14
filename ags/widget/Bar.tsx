@@ -4,6 +4,7 @@ import Hyprland from "gi://AstalHyprland";
 const hyprland = Hyprland.get_default();
 import Workspaces from "./hyprland/workspaces/Workspaces";
 import CpuUsage from "./system/CpuUsage";
+import BatteryLevel from "./system/BatteryLevel";
 
 
 const time = Variable("").poll(1000, "date")
@@ -26,6 +27,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                 <label label={time()} />
             </button>
             <CpuUsage />
+            <BatteryLevel />
         </box>
     </window>
 }

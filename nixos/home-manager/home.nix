@@ -45,6 +45,12 @@
     ];
   };
 
+  services.upower = {
+    enable = true;
+    percentageLow = 30;
+    percentageCritical = 10;
+  };
+
   programs.neovim = {
     enable = true;
     viAlias = true;

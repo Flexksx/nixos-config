@@ -11,7 +11,7 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 # Apply the wallpaper using wal with light mode and adjusted saturation
 # wal -i "$BG" -l --saturate 0.4 --cols16 lighten
 wallust run "$BG" --palette softlight16 
-
+matugen image "$BG" -m light
 # Update the waybar style
 STYLE_PATH='/home/flexksx/nixos-config/waybar/style.css'
 content=$(cat "$STYLE_PATH")

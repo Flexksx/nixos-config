@@ -17,7 +17,7 @@
     walker.url = "github:abenz1267/walker";
     # Home manager
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/master/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ags.url = "github:Aylur/ags";

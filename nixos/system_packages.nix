@@ -16,6 +16,11 @@
     gnumake
     waybar
     python312
+    python312Packages.pip
+    python312Packages.pygobject3
+    gobject-introspection
+    cairo
+    gtk3
     killall
     cmatrix
     postman
