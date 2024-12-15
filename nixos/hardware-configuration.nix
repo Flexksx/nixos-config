@@ -12,6 +12,11 @@
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
+  services.upower = {
+    enable = true;
+    percentageLow = 30;
+    percentageCritical = 10;
+  };
   boot.initrd.availableKernelModules = [
     "nvme"
     "xhci_pci"

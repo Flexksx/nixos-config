@@ -16,23 +16,27 @@ const getClientIcon = (
 type WorkspaceButtonProps = {
   workspace: Hyprland.Workspace;
   clientsIconsRegex: Map<string, string>;
+  focusedWorkspaceId: number | null;
 };
 
 export default function WorkspaceButton({
   workspace,
   clientsIconsRegex,
+  focusedWorkspaceId,
 }: WorkspaceButtonProps) {
-  return <box className = "workspaceButton">
-    {bind(workspace, "clients").as((clients) => {
-      const icons = clients
-        .map((client) => getClientIcon(clientsIconsRegex, client))
-        .join(" ");
-      const workspaceNumber = workspace.get_id();
-      return (
-        <button onClick={() => workspace.focus()}>
-          {workspaceNumber + " " + icons}
-        </button>
-      );
-    })}
-  </box>
+  const isFocused = workspace.get_id() === focusedWorkspaceId;
+  return (
+    <button
+      className={`workspace_button ${isFocused ? "focused" : ""}`}
+      onClick={() => workspace.focus()}
+    >
+      {bind(workspace, "clients").as((clients) => {
+        const icons = clients
+          .map((client) => getClientIcon(clientsIconsRegex, client))
+          .join(" ");
+        const workspaceNumber = workspace.get_id();
+        return `${workspaceNumber} ${icons}`;
+      })}
+    </button>
+  );
 }

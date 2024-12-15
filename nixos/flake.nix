@@ -12,12 +12,12 @@
     mcmojave-hyprcursor.url = "github:libadoxon/mcmojave-hyprcursor";
 
     matugen = {
-      url = "github:/InioX/Matugen";
+      url = "github:InioX/Matugen?ref=refs/tags/v2.4.0";
     };
     walker.url = "github:abenz1267/walker";
     # Home manager
     home-manager = {
-      url = "github:nix-community/home-manager/master/release-24.11";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ags.url = "github:Aylur/ags";

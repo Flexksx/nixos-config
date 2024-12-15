@@ -4,14 +4,13 @@ import { bind } from "astal";
 
 export default function BatteryLevel() {
     const bat = Battery.get_default()
-    print(bat)
-    print(bat.isPresent)
-    print(bat.batteryIconName)
-    return <box className="Battery"
+    return <box className="battery_level"
         visible={bind(bat, "isPresent")}>
-        <icon icon={bind(bat, "batteryIconName")} />
-        <label label={bind(bat, "percentage").as(p =>
-            `${Math.floor(p * 100)} %`
-        )} />
+        <circularprogress className="circular_progress" value={bind(bat, "percentage")} rounded={true} >
+            <label label={bind(bat, "percentage").as(p =>
+                `${Math.floor(p * 100)}`
+            )} />
+        </circularprogress>
+
     </box>
 }

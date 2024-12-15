@@ -1,0 +1,112 @@
+@use 'sass:color';
+
+$background: #fff7fd;
+
+$error: #ba1a1a;
+
+$error_container: #ffdad6;
+
+$inverse_on_surface: #f7eef6;
+
+$inverse_primary: #ddb9f8;
+
+$inverse_surface: #332f35;
+
+$on_background: #1e1a20;
+
+$on_error: #ffffff;
+
+$on_error_container: #410002;
+
+$on_primary: #ffffff;
+
+$on_primary_container: #290c41;
+
+$on_primary_fixed: #290c41;
+
+$on_primary_fixed_variant: #573a70;
+
+$on_secondary: #ffffff;
+
+$on_secondary_container: #211829;
+
+$on_secondary_fixed: #211829;
+
+$on_secondary_fixed_variant: #4e4256;
+
+$on_surface: #1e1a20;
+
+$on_surface_variant: #4b454d;
+
+$on_tertiary: #ffffff;
+
+$on_tertiary_container: #321015;
+
+$on_tertiary_fixed: #321015;
+
+$on_tertiary_fixed_variant: #663a3f;
+
+$outline: #7c757e;
+
+$outline_variant: #cdc4ce;
+
+$primary: #705289;
+
+$primary_container: #f1daff;
+
+$primary_fixed: #f1daff;
+
+$primary_fixed_dim: #ddb9f8;
+
+$scrim: #000000;
+
+$secondary: #665a6e;
+
+$secondary_container: #eeddf6;
+
+$secondary_fixed: #eeddf6;
+
+$secondary_fixed_dim: #d1c1d9;
+
+$shadow: #000000;
+
+$source_color: #a01efd;
+
+$surface: #fff7fd;
+
+$surface_bright: #fff7fd;
+
+$surface_container: #f4ebf3;
+
+$surface_container_high: #eee6ed;
+
+$surface_container_highest: #e8e0e8;
+
+$surface_container_low: #faf1f9;
+
+$surface_container_lowest: #ffffff;
+
+$surface_dim: #e0d8df;
+
+$surface_tint: #705289;
+
+$surface_variant: #e9dfea;
+
+$tertiary: #815156;
+
+$tertiary_container: #ffdadc;
+
+$tertiary_fixed: #ffdadc;
+
+$tertiary_fixed_dim: #f3b7bc;
+
+
+
+$theme: 'dark';
+
+
+$surface_transparent: color.adjust($surface, $lightness: -20%);
+$inverse_surface_transparent: color.adjust($inverse_surface, $lightness: 20%);
+$inverse_surface_transparent_variant: color.adjust($inverse_surface, $lightness: 10%);
+$inverse_surface_transparent_overlay: linear-gradient(0deg, $inverse_surface_transparent, $inverse_surface_transparent);
+$inverse_surface_transparent_variant_overlay: linear-gradient(0deg, $inverse_surface_transparent_variant, $inverse_surface_transparent_variant);
