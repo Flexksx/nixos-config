@@ -61,8 +61,7 @@ export default function Workspaces({ hyprlandClient }: WorkspacesProps) {
               clientsIconsRegex={clientsIconsRegex}
             />
           ));
-      })
-      )}
+      })}
     </box>
   );
 }
