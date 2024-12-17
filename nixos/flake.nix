@@ -10,10 +10,8 @@
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
     nixmox.url = "github:Sorixelle/nixmox";
     mcmojave-hyprcursor.url = "github:libadoxon/mcmojave-hyprcursor";
-
-    matugen = {
-      url = "github:InioX/Matugen?ref=refs/tags/v2.4.0";
-    };
+    hyprland.url = "github:hyprwm/Hyprland";
+    matugen.url = "github:InioX/Matugen?ref=refs/tags/v2.4.0";
     walker.url = "github:abenz1267/walker";
     # Home manager
     home-manager = {

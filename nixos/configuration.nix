@@ -98,7 +98,9 @@
     serviceConfig.ExecStart = "${pkgs.bluez}/bin/mpris-proxy";
   };
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 
   services.blueman.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

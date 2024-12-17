@@ -19,7 +19,7 @@
     modesetting.enable = true;
 
     # NVIDIA power management (Experimental, disable for stability).
-    powerManagement.enable = false;
+    powerManagement.enable = true;
     powerManagement.finegrained = false;
 
     # Use the NVIDIA proprietary (non-open) kernel module.
@@ -36,6 +36,6 @@
     };
 
     # Use the stable NVIDIA driver from the kernel's default package.
-    package = config.boot.kernelPackages.nvidiaPackages.production;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 }
