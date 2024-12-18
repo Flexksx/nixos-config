@@ -10,7 +10,7 @@ window.Bar {
     padding-left: 10px;
     padding-right: 10px;
     >centerbox {
-        background: $surface_transparent;
+        background: transparent;
         border-radius: 0px 0px 24px 24px;
     }
 
@@ -19,17 +19,29 @@ window.Bar {
 
 
 .workspaces{
-    background-color: $secondary_container;
+    background-color: $primary_container;
     border-radius: 24px;
 }
+
 .workspace_button {
     border-radius: 36px;
-    background-color: $secondary_container;
-    color: $on_secondary_container;
+    background-color: $primary_container;
+    color: $on_primary_container;
+    
 }
-.workspace_button.focused {
+
+.workspace_button.focused{
+    background-color: $secondary;
+    color: $on_primary;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.workspace_button:hover {
     background-color: $tertiary_container;
     color: $on_primary_container;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .battery_level {
     border-radius: 8px;
@@ -41,7 +53,7 @@ window.Bar {
 .circular_progress{
     color: $source_color;
     min-width: 36px;
-    font-size: 5px;
+    font-size: 4px;
 
     label {
         color: $on_surface;

@@ -25,7 +25,9 @@
     cmatrix
     postman
     lxappearance
+    wlr-randr
     lolcat
+    nwg-displays
     btop
     rhythmbox
     nodejs-18_x

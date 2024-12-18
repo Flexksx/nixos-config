@@ -49,15 +49,13 @@ export default function Workspaces({ hyprlandClient }: WorkspacesProps) {
   return (
     <box className="workspaces">
       {bind(hyprlandClient, "workspaces").as((workspaces) => {
-        const focusedWorkspace = hyprlandClient.get_focused_workspace();
-        const focusedWorkspaceId = focusedWorkspace ? focusedWorkspace.get_id() : null;
 
         return workspaces
           .sort((a, b) => a.get_id() - b.get_id())
           .map((workspace) => (
             <WorkspaceButton
               workspace={workspace}
-              focusedWorkspaceId={focusedWorkspaceId}
+              hyprlandClient={hyprlandClient}
               clientsIconsRegex={clientsIconsRegex}
             />
           ));

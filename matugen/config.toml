@@ -2,7 +2,7 @@
 command = "hyprpaper"
 arguments = ["wallpaper"]
 set = true
-
+scheme = "light"
 
 [templates.waybar]
 input_path = '~/nixos-config/matugen/templates/waybar-colors.css'

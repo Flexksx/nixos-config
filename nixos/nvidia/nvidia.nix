@@ -12,14 +12,16 @@
   };
 
   # Load NVIDIA driver for Xorg and Wayland
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [
+    "nvidia"
+  ];
 
   hardware.nvidia = {
     # Modesetting is required for optimal functionality.
     modesetting.enable = true;
 
     # NVIDIA power management (Experimental, disable for stability).
-    powerManagement.enable = true;
+    powerManagement.enable = false;
     powerManagement.finegrained = false;
 
     # Use the NVIDIA proprietary (non-open) kernel module.
@@ -36,6 +38,6 @@
     };
 
     # Use the stable NVIDIA driver from the kernel's default package.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
   };
 }
