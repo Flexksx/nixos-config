@@ -5,6 +5,7 @@ const hyprland = Hyprland.get_default();
 import Workspaces from "./hyprland/workspaces/Workspaces";
 import CpuUsage from "./system/CpuUsage";
 import BatteryLevel from "./system/BatteryLevel";
+import FocusedClient from "./hyprland/client/FocusedClient";
 
 
 const time = Variable("").poll(1000, "date")
@@ -20,6 +21,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
             | Astal.WindowAnchor.RIGHT}
         application={App}>
         <box>
+            <FocusedClient />
             <Workspaces hyprlandClient={hyprland} />
             <button
                 onClick={() => print("hello")}

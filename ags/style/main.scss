@@ -27,7 +27,6 @@ window.Bar {
     border-radius: 36px;
     background-color: $primary_container;
     color: $on_primary_container;
-    
 }
 
 .workspace_button.focused{
@@ -44,8 +43,6 @@ window.Bar {
     padding-right: 20px;
 }
 .battery_level {
-    border-radius: 8px;
-    margin: 2px;
     background-color: $tertiary_container;
     border-radius: 50%;
   } 
@@ -53,13 +50,21 @@ window.Bar {
 .circular_progress{
     color: $source_color;
     min-width: 36px;
-    font-size: 4px;
+    font-size: 5px;
 
     label {
         color: $on_surface;
         font-weight: bold;
         font-size: 14px;
     }
+}
+
+.focused_client{
+    background-color: $secondary;
+    color: $on_primary;
+    border-radius: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 // .battery_level  .circular_progress {
