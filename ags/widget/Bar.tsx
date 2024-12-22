@@ -21,8 +21,8 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
             | Astal.WindowAnchor.RIGHT}
         application={App}>
         <box>
-            <FocusedClient />
             <Workspaces hyprlandClient={hyprland} />
+            <FocusedClient />
             <button
                 onClick={() => print("hello")}
                 halign={Gtk.Align.CENTER} >

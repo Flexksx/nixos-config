@@ -55,6 +55,7 @@
       mplus-outline-fonts.githubRelease
       dina-font
       proggyfonts
+      meslo-lgs-nf
       cascadia-code
     ];
   };

@@ -27,7 +27,7 @@ export default function WorkspaceButton({
   return (
     <button
       className={bind(hyprlandClient, "focused_workspace").as(
-        (focusedWorkspace) => ("workspace_button " + (focusedWorkspace === workspace ? "focused" : ""))
+        (focusedWorkspace) => (`workspace_button-${workspace.get_id()} ` + (focusedWorkspace === workspace ? "focused" : ""))
       )}
       onClick={() => workspace.focus()}
     >

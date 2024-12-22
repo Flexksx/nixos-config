@@ -18,6 +18,7 @@
     python312
     python312Packages.pip
     python312Packages.pygobject3
+    python312Packages.requests
     gobject-introspection
     cairo
     gtk3

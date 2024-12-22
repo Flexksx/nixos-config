@@ -1,1 +1,1 @@
-/home/flexksx/nixos-config/backrgrounds/light/WindowsBlue.jpg
+/home/flexksx/nixos-config/backrgrounds/light/Frog.png

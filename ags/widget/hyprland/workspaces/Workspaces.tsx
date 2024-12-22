@@ -1,6 +1,7 @@
 import Hyprland from "gi://AstalHyprland";
 import WorkspaceButton from "./WorkspaceButton";
 import { bind } from "astal";
+import HorizontalSlashAngledSeparator from "../../separator/HorizontalSlashAngledSeparator";
 
 const clientsIconsRegex: Map<string, string> = new Map([
   ["org.telegram.desktop", ""],
@@ -52,12 +53,15 @@ export default function Workspaces({ hyprlandClient }: WorkspacesProps) {
 
         return workspaces
           .sort((a, b) => a.get_id() - b.get_id())
-          .map((workspace) => (
-            <WorkspaceButton
-              workspace={workspace}
-              hyprlandClient={hyprlandClient}
-              clientsIconsRegex={clientsIconsRegex}
-            />
+          .map((workspace, index) => (
+            <box>
+              <WorkspaceButton
+                workspace={workspace}
+                hyprlandClient={hyprlandClient}
+                clientsIconsRegex={clientsIconsRegex}
+              />
+              <HorizontalSlashAngledSeparator index={index + 1} />
+            </box>
           ));
       })}
     </box>
