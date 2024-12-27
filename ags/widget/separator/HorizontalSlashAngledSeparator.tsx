@@ -1,14 +1,14 @@
 type HorizontalSlashAngledSeparatorProps = {
-    index: number;
+    className: string;
 };
 
 
 export default function HorizontalSlashAngledSeparator({
-    index
+    className
 }: HorizontalSlashAngledSeparatorProps) {
 
     return (
-        <box className={`horizontal_slash_angled_separator-${index}`}>
+        <box className={className}>
             {`\uE0B0`}
         </box>
     );

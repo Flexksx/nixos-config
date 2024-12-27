@@ -11,6 +11,7 @@ window.Bar {
   margin-right: 10px;
   padding-left: 10px;
   padding-right: 10px;
+
   > centerbox {
     background: transparent;
     border-radius: 0px 0px 24px 24px;
@@ -33,6 +34,7 @@ window.Bar {
   color: $on_primary;
   padding-left: 15px;
   padding-right: 15px;
+  transition-property: all;
 }
 
 .workspace_button:hover {
@@ -41,6 +43,7 @@ window.Bar {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .battery_level {
   background-color: $tertiary_container;
   border-radius: 50%;
@@ -58,77 +61,17 @@ window.Bar {
   }
 }
 
-$workspace-colors: (
-  $primary,
-  $primary_container,
-  $secondary,
-$secondary_container,
-  $tertiary,
-$tertiary_container,
- 
-);
-
-@for $i from 1 through length($workspace-colors) {
-  .workspace_button-#{$i} {
-    background-color: nth($workspace-colors, $i);
-    color: $on_primary_container;
-    border-radius: 0px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    &:hover {
-      background-color: lighten(nth($workspace-colors, $i), 10%);
-      color: $on_primary_container;
-    }
-  }
-
-  .horizontal_slash_angled_separator-#{$i} {
-    @if $i == length($list: $workspace-colors) {
-      background-color: transparent;
-      color: nth($workspace-colors, $i);
-    } @else {
-      background-color: nth($workspace-colors, $i +1);
-      color: nth($workspace-colors, $i);
-    }
-    font-size: 32px;
-  }
+.focused_client_separator{
+  font-size: 32px;
+  color:$tertiary_container;
+  background-color: transparent;
 }
 
-// @for $i from 1 through length($workspace-colors) {
-//     .workspace_button-#{$i} {
-//       background-color: nth($workspace-colors, $i);
-//       color: $on_primary_container;
-//       border-radius: 0px;
-  
-//       // Example: add padding or different styling if you like:
-//       padding-left: 10px;
-//       padding-right: 10px;
-  
-//       // (Optional) Hover state:
-//       &:hover {
-//         background-color: lighten(nth($workspace-colors, $i), 10%);
-//         color: $on_primary_container;
-//       }
-//     }
-  
-//     // If you want matching or distinct separators:
-//     .horizontal_slash_angled_separator-#{$i} {
-//         @if $i  == 9{
-//             background-color: nth($workspace-colors, $i);
-//             color: nth($workspace-colors, $i-1);
-//         } @else {
-//             background-color: nth($workspace-colors, $i-1);
-//             color: nth($workspace-colors, $i);
-//         }
-//       font-size: 32px;
-//     }
-//   }
-
 .focused_client {
-  background-color: $secondary;
-  color: $on_primary;
-  border-radius: 24px;
+  background-color: $tertiary_container;
+  color: $on_primary_container;
+  border-bottom-left-radius: 24px;
+  border-top-left-radius: 24px;
   padding-left: 10px;
   padding-right: 10px;
 }

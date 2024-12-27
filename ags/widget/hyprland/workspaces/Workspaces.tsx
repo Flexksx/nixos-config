@@ -59,8 +59,9 @@ export default function Workspaces({ hyprlandClient }: WorkspacesProps) {
                 workspace={workspace}
                 hyprlandClient={hyprlandClient}
                 clientsIconsRegex={clientsIconsRegex}
+                isFirst={(index == 0)}
+                isLast={(index == workspaces.length)}
               />
-              <HorizontalSlashAngledSeparator index={index + 1} />
             </box>
           ));
       })}

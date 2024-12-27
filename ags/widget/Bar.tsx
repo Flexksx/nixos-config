@@ -6,10 +6,32 @@ import Workspaces from "./hyprland/workspaces/Workspaces";
 import CpuUsage from "./system/CpuUsage";
 import BatteryLevel from "./system/BatteryLevel";
 import FocusedClient from "./hyprland/client/FocusedClient";
+import HorizontalSlashAngledSeparator from "./separator/HorizontalSlashAngledSeparator";
 
 
 const time = Variable("").poll(1000, "date")
 
+
+function Left() {
+    return (<box>
+        <FocusedClient />
+        <HorizontalSlashAngledSeparator className="focused_client_separator" />
+    </box>)
+}
+
+function Center() {
+    return (<box>
+        <Workspaces hyprlandClient={hyprland} />
+    </box>)
+}
+
+function Right() {
+    return (
+        <box>
+            <BatteryLevel />
+        </box>
+    )
+}
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
     return <window
@@ -20,16 +42,10 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
             | Astal.WindowAnchor.LEFT
             | Astal.WindowAnchor.RIGHT}
         application={App}>
-        <box>
-            <Workspaces hyprlandClient={hyprland} />
-            <FocusedClient />
-            <button
-                onClick={() => print("hello")}
-                halign={Gtk.Align.CENTER} >
-                <label label={time()} />
-            </button>
-            <CpuUsage />
-            <BatteryLevel />
-        </box>
+        <centerbox>
+            <Left />
+            <Center />
+            <Right />
+        </centerbox>
     </window>
 }

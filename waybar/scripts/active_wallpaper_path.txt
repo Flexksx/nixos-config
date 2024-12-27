@@ -1,1 +1,1 @@
-/home/flexksx/nixos-config/backrgrounds/light/Frog.png
+/home/flexksx/nixos-config/backrgrounds/dark/AbstractRed.jpg
