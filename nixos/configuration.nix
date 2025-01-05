@@ -73,6 +73,8 @@
       thunar-volman
     ];
   };
+
+  programs.steam.enable = true;
   services.udev.packages = [ pkgs.android-udev-rules ];
   virtualisation.docker.enable = true;
   services.gvfs.enable = true; # Mount, trash, and other functionalities

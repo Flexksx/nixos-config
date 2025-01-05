@@ -7,6 +7,8 @@ import CpuUsage from "./system/CpuUsage";
 import BatteryLevel from "./system/BatteryLevel";
 import FocusedClient from "./hyprland/client/FocusedClient";
 import HorizontalSlashAngledSeparator from "./separator/HorizontalSlashAngledSeparator";
+import BackgroundSelector from "./hyprland/background/BackgroundSelector";
+import LeftRoundSeparator from "./separator/LeftRoundSeparator";
 
 
 const time = Variable("").poll(1000, "date")
@@ -15,7 +17,7 @@ const time = Variable("").poll(1000, "date")
 function Left() {
     return (<box>
         <FocusedClient />
-        <HorizontalSlashAngledSeparator className="focused_client_separator" />
+        {/* <LeftRoundSeparator className="focused_client_separator" /> */}
     </box>)
 }
 
@@ -29,6 +31,7 @@ function Right() {
     return (
         <box>
             <BatteryLevel />
+            <BackgroundSelector />
         </box>
     )
 }

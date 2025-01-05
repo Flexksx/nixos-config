@@ -70,8 +70,9 @@ window.Bar {
 .focused_client {
   background-color: $tertiary_container;
   color: $on_primary_container;
-  border-bottom-left-radius: 24px;
-  border-top-left-radius: 24px;
+  // border-bottom-left-radius: 24px;
+  // border-top-left-radius: 24px;
+  border-radius: 24px;
   padding-left: 10px;
   padding-right: 10px;
 }
