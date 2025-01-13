@@ -18,30 +18,41 @@ window.Bar {
   }
 }
 
-.workspaces {
+// .workspaces {
+//   background-color: $primary_container;
+//   border-radius: 24px;
+// }
+
+// .workspace_button {
+//   border-radius: 36px;
+//   background-color: $primary_container;
+//   color: $on_primary_container;
+// }
+
+// .workspace_button.focused {
+//   background-color: $secondary;
+//   color: $on_primary;
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   transition-property: all;
+// }
+
+// .workspace_button:hover {
+//   background-color: $tertiary_container;
+//   color: $on_primary_container;
+//   padding-left: 20px;
+//   padding-right: 20px;
+// }
+
+.dotted-workspaces {
   background-color: $primary_container;
   border-radius: 24px;
 }
 
-.workspace_button {
+.workspace-dot{
   border-radius: 36px;
   background-color: $primary_container;
   color: $on_primary_container;
-}
-
-.workspace_button.focused {
-  background-color: $secondary;
-  color: $on_primary;
-  padding-left: 15px;
-  padding-right: 15px;
-  transition-property: all;
-}
-
-.workspace_button:hover {
-  background-color: $tertiary_container;
-  color: $on_primary_container;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .battery_level {

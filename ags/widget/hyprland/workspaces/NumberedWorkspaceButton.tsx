@@ -21,7 +21,7 @@ type WorkspaceButtonProps = {
   isLast: boolean
 };
 
-export default function WorkspaceButton({
+export default function NumberedWorkspaceButton({
   workspace,
   clientsIconsRegex,
   hyprlandClient,

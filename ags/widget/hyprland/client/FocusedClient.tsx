@@ -6,6 +6,9 @@ export default function FocusedClient() {
     return (
         <box className="focused_client">
             {bind(hyprlandClient, "focused_client").as((focusedClient) => {
+                if (focusedClient === null) {
+                    return "\uf313"
+                }
                 if (focusedClient.get_title().length > 53) {
                     return (focusedClient.get_title().slice(0, 50) + "...")
                 }

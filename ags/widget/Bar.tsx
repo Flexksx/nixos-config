@@ -2,13 +2,14 @@ import { App, Astal, Gtk, Gdk } from "astal/gtk3"
 import { Variable } from "astal"
 import Hyprland from "gi://AstalHyprland";
 const hyprland = Hyprland.get_default();
-import Workspaces from "./hyprland/workspaces/Workspaces";
+import NumberedWorkspaces from "./hyprland/workspaces/NumberedWorkspaces";
 import CpuUsage from "./system/CpuUsage";
 import BatteryLevel from "./system/BatteryLevel";
 import FocusedClient from "./hyprland/client/FocusedClient";
 import HorizontalSlashAngledSeparator from "./separator/HorizontalSlashAngledSeparator";
-import BackgroundSelector from "./hyprland/background/BackgroundSelector";
+import WallpaperSelectorButton from "./hyprland/background/BackgroundSelector";
 import LeftRoundSeparator from "./separator/LeftRoundSeparator";
+import DotWorkspaces from "./hyprland/workspaces/DotWorkspaces";
 
 
 const time = Variable("").poll(1000, "date")
@@ -23,7 +24,8 @@ function Left() {
 
 function Center() {
     return (<box>
-        <Workspaces hyprlandClient={hyprland} />
+        {/* <NumberedWorkspaces hyprlandClient={hyprland} /> */}
+        <DotWorkspaces hyprlandClient={hyprland} />
     </box>)
 }
 
@@ -31,7 +33,7 @@ function Right() {
     return (
         <box>
             <BatteryLevel />
-            <BackgroundSelector />
+            <WallpaperSelectorButton />
         </box>
     )
 }

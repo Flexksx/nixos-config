@@ -29,6 +29,7 @@
     wlr-randr
     lolcat
     nwg-displays
+    fzf
     btop
     rhythmbox
     nodejs-18_x
@@ -46,7 +47,6 @@
     clementine
     pass
     cbonsai
-    android-studio
     clang
     cmake
     xdg-desktop-portal-gnome

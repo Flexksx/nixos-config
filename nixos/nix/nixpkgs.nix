@@ -24,6 +24,7 @@
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
+      android_sdk.accept_license = true;
     };
   };
 }

@@ -1,1 +1,1 @@
-/home/flexksx/nixos-config/backrgrounds/dark/Thunder.jpg
+/home/flexksx/nixos-config/backrgrounds/light/BigSur.jpg

@@ -73,9 +73,6 @@
     vimAlias = true;
     withPython3 = true;
     withNodeJs = true;
-    extraConfig = ''
-      set runtimepath+=~/nixos-config/neovim
-    '';
 
   };
 

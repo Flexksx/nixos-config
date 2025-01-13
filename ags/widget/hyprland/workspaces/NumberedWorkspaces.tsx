@@ -1,5 +1,5 @@
 import Hyprland from "gi://AstalHyprland";
-import WorkspaceButton from "./WorkspaceButton";
+import NumberedWorkspaceButton from "./NumberedWorkspaceButton";
 import { bind } from "astal";
 import HorizontalSlashAngledSeparator from "../../separator/HorizontalSlashAngledSeparator";
 
@@ -46,7 +46,7 @@ type WorkspacesProps = {
   hyprlandClient: Hyprland.Hyprland;
 };
 
-export default function Workspaces({ hyprlandClient }: WorkspacesProps) {
+export default function NumberedWorkspaces({ hyprlandClient }: WorkspacesProps) {
   return (
     <box className="workspaces">
       {bind(hyprlandClient, "workspaces").as((workspaces) => {
@@ -55,7 +55,7 @@ export default function Workspaces({ hyprlandClient }: WorkspacesProps) {
           .sort((a, b) => a.get_id() - b.get_id())
           .map((workspace, index) => (
             <box>
-              <WorkspaceButton
+              <NumberedWorkspaceButton
                 workspace={workspace}
                 hyprlandClient={hyprlandClient}
                 clientsIconsRegex={clientsIconsRegex}

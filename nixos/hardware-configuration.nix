@@ -28,7 +28,26 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
-
+  boot.consoleLogLevel = 0;
+  boot.initrd.verbose = false;
+  boot.kernelParams = [
+    "quiet"
+    "splash"
+    "boot.shell_on_fail"
+    "loglevel=3"
+    "rd.systemd.show_status=false"
+    "rd.udev.log_level=3"
+    "udev.log_priority=3"
+  ];
+  boot.plymouth = {
+    enable = true;
+    theme = "rings";
+    themePackages = with pkgs; [
+      (adi1090x-plymouth-themes.override {
+        selected_themes = [ "rings" ];
+      })
+    ];
+  };
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/09662f20-26a8-44e8-8f64-6e2c522d3b3d";
     fsType = "ext4";
