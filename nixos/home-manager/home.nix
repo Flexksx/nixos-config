@@ -10,8 +10,8 @@
   nixpkgs.config.allowUnfree = true;
   imports = [
     inputs.walker.homeManagerModules.default
-    inputs.spicetify-nix.homeManagerModules.default
-    ./modules/ags/ags.nix
+    ./modules/spicetify.nix
+    ./modules/ags.nix
   ];
   home = {
     username = "flexksx";
@@ -29,7 +29,6 @@
     sessionVariables = {
       HYPRCURSOR_THEME = "McMojave";
     };
-    file."./config/matugen/config.toml".source = ../../../../matugen/config.toml;
   };
 
   systemd.user.startServices = "sd-switch";
@@ -77,26 +76,5 @@
     };
   };
   qt.enable = true;
-  programs.spicetify =
-    let
-      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-    in
-    {
-      enable = true;
-      enabledExtensions = with spicePkgs.extensions; [
-        shuffle
-        adblock
-      ];
-      enabledCustomApps = with spicePkgs.apps; [
-        newReleases
-        ncsVisualizer
-      ];
-      enabledSnippets = with spicePkgs.snippets; [
-        rotatingCoverart
-        pointer
-      ];
-      theme = spicePkgs.themes.catppuccin;
-      colorScheme = "mocha";
-    };
 
 }
