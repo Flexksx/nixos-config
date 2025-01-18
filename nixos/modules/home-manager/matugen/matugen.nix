@@ -25,6 +25,17 @@
         input_path = "./templates/gtk-colors.css";
         output_path = "~/.config/gtk-3.0/colors.css";
       };
+
+      gtk3alt = {
+        input_path = "./templates/gtk-colors.css";
+        output_path = "~/nixos-config/nixos/home-manager/gtk-styles/gtk3colors.css";
+      };
+
+      gtk4alt = {
+        input_path = "./templates/gtk-colors.css";
+        output_path = "~/nixos-config/nixos/home-manager/gtk-styles/gtk4colors.css";
+      };
+
       waybar = {
         input_path = "./templates/waybar-colors.css";
         output_path = "~/nixos-config/waybar/colors.css";
