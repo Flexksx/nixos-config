@@ -9,9 +9,9 @@
 {
   nixpkgs.config.allowUnfree = true;
   imports = [
-    inputs.ags.homeManagerModules.default
     inputs.walker.homeManagerModules.default
     inputs.spicetify-nix.homeManagerModules.default
+    ./modules/matugen/matugen.nix
   ];
   home = {
     username = "flexksx";
@@ -118,4 +118,5 @@
       theme = spicePkgs.themes.catppuccin;
       colorScheme = "mocha";
     };
+
 }
