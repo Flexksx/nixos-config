@@ -1,5 +1,5 @@
 import Hyprland from "gi://AstalHyprland";
-import { bind } from "../../../../../.local/share/ags";
+import { bind } from "astal";
 
 export default function FocusedClient() {
     const hyprlandClient = Hyprland.get_default();
