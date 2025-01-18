@@ -13,9 +13,13 @@
     hyprland.url = "github:hyprwm/Hyprland";
     matugen.url = "github:InioX/Matugen?ref=refs/tags/v2.4.0";
     walker.url = "github:abenz1267/walker";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Home manager
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ags.url = "github:Aylur/ags";

@@ -1,1 +1,1 @@
-/home/flexksx/nixos-config/backrgrounds/dark/Roses.jpg
+/home/flexksx/nixos-config/backrgrounds/dark/Berries.jpg

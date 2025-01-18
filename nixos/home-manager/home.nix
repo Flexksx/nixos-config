@@ -10,6 +10,7 @@
   imports = [
     inputs.ags.homeManagerModules.default
     inputs.walker.homeManagerModules.default
+    inputs.spicetify-nix.homeManagerModules.default
   ];
   home = {
     username = "flexksx";

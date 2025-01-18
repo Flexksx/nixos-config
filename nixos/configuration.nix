@@ -25,10 +25,12 @@
     ./fonts.nix
     ./users/users.nix
     ./terminal/zsh.nix
+
     ./services/auto-cpufreq.nix
     ./git/git.nix
     # ./nix/nix.nix
     ./programs/hyprland/hyprland.nix
+    ./programs/spicetify.nix
     # ./terminal/kitty.nix
   ];
   nixpkgs = {
