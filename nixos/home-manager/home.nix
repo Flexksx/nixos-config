@@ -11,7 +11,7 @@
   imports = [
     inputs.walker.homeManagerModules.default
     inputs.spicetify-nix.homeManagerModules.default
-    ./modules/matugen/matugen.nix
+    ./modules/ags/ags.nix
   ];
   home = {
     username = "flexksx";
@@ -29,6 +29,7 @@
     sessionVariables = {
       HYPRCURSOR_THEME = "McMojave";
     };
+    file."./config/matugen/config.toml".source = ../../../../matugen/config.toml;
   };
 
   systemd.user.startServices = "sd-switch";
@@ -45,27 +46,6 @@
       wlrobs
       obs-backgroundremoval
       obs-pipewire-audio-capture
-    ];
-  };
-  programs.ags = {
-    enable = true;
-    configDir = ../../ags;
-    extraPackages = with pkgs; [
-      gtksourceview
-      webkitgtk
-      accountsservice
-      fzf
-      inputs.ags.packages.${pkgs.system}.battery
-      inputs.ags.packages.${pkgs.system}.hyprland
-      inputs.ags.packages.${pkgs.system}.apps
-      inputs.ags.packages.${pkgs.system}.wireplumber
-      inputs.ags.packages.${pkgs.system}.network
-      inputs.ags.packages.${pkgs.system}.tray
-      inputs.ags.packages.${pkgs.system}.notifd
-      inputs.ags.packages.${pkgs.system}.mpris
-      inputs.ags.packages.${pkgs.system}.bluetooth
-      inputs.ags.packages.${pkgs.system}.auth
-      inputs.ags.packages.${pkgs.system}.cava
     ];
   };
 
