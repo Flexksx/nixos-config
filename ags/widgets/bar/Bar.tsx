@@ -10,13 +10,14 @@ import HorizontalSlashAngledSeparator from "./separator/HorizontalSlashAngledSep
 import WallpaperSelectorButton from "./hyprland/background/BackgroundSelector";
 import LeftRoundSeparator from "./separator/LeftRoundSeparator";
 import DotWorkspaces from "./hyprland/workspaces/DotWorkspaces";
+import DynamicNotch from "./notch/DynamicNotch";
 
 
 const time = Variable("").poll(1000, "date")
 
 
 function Left() {
-    return (<box>
+    return (<box hexpand halign={Gtk.Align.START}>
         <FocusedClient />
         {/* <LeftRoundSeparator className="focused_client_separator" /> */}
     </box>)
@@ -24,14 +25,15 @@ function Left() {
 
 function Center() {
     return (<box>
-        {/* <NumberedWorkspaces hyprlandClient={hyprland} /> */}
-        <DotWorkspaces hyprlandClient={hyprland} />
+        <DynamicNotch />
+        {/* <DotWorkspaces hyprlandClient={hyprland} /> */}
     </box>)
 }
 
 function Right() {
     return (
-        <box>
+        <box hexpand halign={Gtk.Align.END}>
+            <NumberedWorkspaces hyprlandClient={hyprland} />
             <BatteryLevel />
             <WallpaperSelectorButton />
         </box>

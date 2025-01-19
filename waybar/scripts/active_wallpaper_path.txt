@@ -1,1 +1,1 @@
-/home/flexksx/nixos-config/backrgrounds/dark/LightsTree.jpg
+/home/flexksx/nixos-config/backrgrounds/dark/WindowsDarkGrey.png

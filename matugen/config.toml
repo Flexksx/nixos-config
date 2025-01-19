@@ -2,7 +2,7 @@
 command = "hyprpaper"
 arguments = ["wallpaper"]
 set = true
-scheme = "light"
+scheme = "dark"
 
 [templates.waybar]
 input_path = '/home/flexksx/nixos-config/matugen/templates/waybar-colors.css'

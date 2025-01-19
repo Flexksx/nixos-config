@@ -1,5 +1,5 @@
 import Hyprland from "gi://AstalHyprland";
-import { bind } from "../../../../../.local/share/ags";
+import { bind } from "../../../../../../.local/share/ags";
 
 const getClientIcon = (
   clientsIconsRegex: Map<string, string>,
