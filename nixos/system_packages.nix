@@ -16,6 +16,7 @@
     gnumake
     waybar
     python312
+    direnv
     python312Packages.pip
     python312Packages.pygobject3
     python312Packages.requests
@@ -97,7 +98,6 @@
     neofetch
     wallust
     vscode
-    rofi-wayland
     telegram-desktop
     slack
     spotify

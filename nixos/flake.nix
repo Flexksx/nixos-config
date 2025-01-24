@@ -12,7 +12,6 @@
     mcmojave-hyprcursor.url = "github:libadoxon/mcmojave-hyprcursor";
     hyprland.url = "github:hyprwm/Hyprland";
     matugen.url = "github:InioX/Matugen?ref=refs/tags/v2.4.0";
-    walker.url = "github:abenz1267/walker";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -1,1 +1,1 @@
-/home/flexksx/nixos-config/backrgrounds/dark/WindowsDarkGrey.png
+/home/flexksx/nixos-config/backrgrounds/dark/WindowsDarkPurple.jpg

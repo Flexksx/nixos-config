@@ -7,31 +7,32 @@
   ...
 }:
 {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowunfree = true;
   imports = [
-    inputs.walker.homeManagerModules.default
     ./modules/spicetify.nix
     ./modules/ags.nix
+    ./modules/rofi.nix
+    ./modules/neovim.nix
   ];
   home = {
     username = "flexksx";
-    homeDirectory = "/home/flexksx";
-    stateVersion = "24.11";
+    homedirectory = "/home/flexksx";
+    stateversion = "24.11";
     packages = with pkgs; [
       spotify-player
       bastet
       themix-gui
       resonance
       inputs.matugen.packages.${system}.default
-      inputs.mcmojave-hyprcursor.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.mcmojave-hyprcursor.packages.${pkgs.stdenv.hostplatform.system}.default
       hyprland-autoname-workspaces
     ];
-    sessionVariables = {
-      HYPRCURSOR_THEME = "McMojave";
+    sessionvariables = {
+      hyprcursor_theme = "mcmojave";
     };
   };
 
-  systemd.user.startServices = "sd-switch";
+  systemd.user.startservices = "sd-switch";
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
@@ -48,31 +49,20 @@
     ];
   };
 
-  programs.neovim = {
-    enable = true;
-    viAlias = true;
-    vimAlias = true;
-    withPython3 = true;
-    withNodeJs = true;
-
-  };
-
-  xdg.configFile.nvim.source = ../../neovim;
-
   programs.hyprlock.enable = true;
   gtk = {
     enable = true;
-    cursorTheme = {
+    cursortheme = {
       package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
+      name = "bibata-modern-ice";
     };
     theme = {
       package = pkgs.adw-gtk3;
       name = "adw-gtk3";
     };
-    iconTheme = {
+    icontheme = {
       package = pkgs.papirus-icon-theme;
-      name = "Papirus";
+      name = "papirus";
     };
   };
   qt.enable = true;
