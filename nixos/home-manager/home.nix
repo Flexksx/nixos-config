@@ -13,6 +13,7 @@
     ./modules/ags.nix
     ./modules/rofi.nix
     ./modules/neovim.nix
+    ./modules/hyprland.nix
   ];
   home = {
     username = "flexksx";

@@ -4,12 +4,13 @@ import Bar from "./widgets/bar/Bar";
 import { monitorFile } from "astal";
 import BackgroundSelector from "./widgets/background-selector/BackgroundSelector";
 import Applauncher from "./widgets/app-launcher/AppLauncher";
+import DynamicNotch from "./widgets/notch/DynamicNotchApp";
 
 App.start({
     css: style,
     main() {
         App.get_monitors().map(Bar)
-
+        App.get_monitors().map(DynamicNotch)
     },
 })
 

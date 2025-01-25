@@ -10,7 +10,7 @@ import HorizontalSlashAngledSeparator from "./separator/HorizontalSlashAngledSep
 import WallpaperSelectorButton from "./hyprland/background/BackgroundSelector";
 import LeftRoundSeparator from "./separator/LeftRoundSeparator";
 import DotWorkspaces from "./hyprland/workspaces/DotWorkspaces";
-import DynamicNotch from "./notch/DynamicNotch";
+import DynamicNotch from "../notch/DynamicNotchApp";
 
 
 const time = Variable("").poll(1000, "date")
@@ -25,7 +25,7 @@ function Left() {
 
 function Center() {
     return (<box>
-        <DynamicNotch />
+        {/* <BarDynamicNotch /> */}
         {/* <DotWorkspaces hyprlandClient={hyprland} /> */}
     </box>)
 }

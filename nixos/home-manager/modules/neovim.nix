@@ -14,5 +14,5 @@
 
   };
 
-  xdg.configFile.nvim.source = ../../neovim;
+  xdg.configFile.nvim.source = ../../../neovim;
 }

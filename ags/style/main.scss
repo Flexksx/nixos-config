@@ -1,7 +1,7 @@
 // https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
 @use "./colors.scss" as *;
 @use "sass:list";
-@use "../widgets/bar/notch/DynamicNotch.scss" as *;
+@use "../widgets/notch/DynamicNotch.scss" as *;
 
 window.Bar {
   color: $primary;
