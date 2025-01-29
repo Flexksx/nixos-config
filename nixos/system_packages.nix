@@ -3,6 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     vim
+    android-studio
+    android-studio-tools
     wget
     google-chrome
     xdg-user-dirs
@@ -92,7 +94,6 @@
     swaynotificationcenter
     imv
     mpv
-    gimp
     pavucontrol
     greetd.tuigreet
     neofetch

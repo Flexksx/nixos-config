@@ -1,1 +1,1 @@
-/home/flexksx/nixos-config/backrgrounds/dark/Cactus.jpg
+/home/flexksx/nixos-config/backrgrounds/light/Windows.jpg

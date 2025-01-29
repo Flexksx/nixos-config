@@ -16,15 +16,30 @@ window.DynamicNotch{
     background: transparent;
 }
 
-.dynamic-notch{
-    min-height: 30px;
+
+.dynamic-notch-button{
+    background: transparent;
+    margin: 0px;
+    border: 0px solid transparent;
+    padding: 0px 0px 20px 20px;
+    margin: 0px 0px 10px 10px;
     min-width: 300px;
+    min-height: 30px;
+    transition-duration: 0ms;
+    // border: 1px transparent;
+}
+
+.dynamic-notch{
+    // min-height: 30px;
+    // min-width: 300px;
     background-color: black;
     color: $primary_fixed;
     border-radius: 0px 0px 24px 24px; 
+    transition-duration: 200ms;
 }
 
 .dynamic-notch.hovered{
     min-width: 500px;
     min-height: 90px;
+    transition-duration: 200ms;
 }
