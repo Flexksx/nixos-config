@@ -93,7 +93,6 @@
     swww
     grim
     slurp
-    swaynotificationcenter
     imv
     mpv
     pavucontrol

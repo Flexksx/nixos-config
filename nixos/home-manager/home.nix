@@ -13,6 +13,7 @@
     ./modules/ags.nix
     ./modules/rofi.nix
     ./modules/neovim.nix
+    ./modules/swaync.nix
     # ./modules/hyprland.nix
   ];
   home = {
