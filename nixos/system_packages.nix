@@ -8,6 +8,7 @@
     wget
     google-chrome
     xdg-user-dirs
+    vscode
     home-manager
     kitty
     polkit
@@ -39,6 +40,7 @@
     mpvpaper
     openjdk17
     jq
+    telegram-desktop
     lxqt.lxqt-policykit
     lm_sensors
     fh
@@ -98,8 +100,6 @@
     greetd.tuigreet
     neofetch
     wallust
-    vscode
-    telegram-desktop
     slack
     spotify
   ];

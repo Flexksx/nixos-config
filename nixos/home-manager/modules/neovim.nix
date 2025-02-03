@@ -11,6 +11,7 @@
     vimAlias = true;
     withPython3 = true;
     withNodeJs = true;
+  
 
   };
 

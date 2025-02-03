@@ -20,26 +20,33 @@ window.DynamicNotch{
 .dynamic-notch-button{
     background: transparent;
     margin: 0px;
-    border: 0px solid transparent;
-    padding: 0px 0px 20px 20px;
-    margin: 0px 0px 10px 10px;
-    min-width: 300px;
-    min-height: 30px;
-    transition-duration: 0ms;
-    // border: 1px transparent;
+    padding-top: 0px;
+    padding-bottom: 24px;
+    border: 0px; 
+    
 }
 
 .dynamic-notch{
-    // min-height: 30px;
-    // min-width: 300px;
     background-color: black;
-    color: $primary_fixed;
+    color: white;
     border-radius: 0px 0px 24px 24px; 
-    transition-duration: 200ms;
+    transition: all 250ms ;
+    min-width: 300px;
+    min-height: 30px;
 }
 
 .dynamic-notch.hovered{
-    min-width: 500px;
-    min-height: 90px;
-    transition-duration: 200ms;
+    min-width: 1200px;
+    min-height: 120px;
+}
+
+.current-time{
+    // color: $primary_fixed;
+    font-size: 16px;
+    padding-left: 12px;
+    padding-bottom: 6px;
+}
+
+.dynamic-notch *{
+    transition-duration: 400ms;
 }
