@@ -1,1 +1,1 @@
-/home/flexksx/nixos-config/backrgrounds/light/CherryBlossomSky.jpg
+/home/flexksx/config/backrgrounds/light/CherryBlossomSky.jpg

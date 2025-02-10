@@ -1,2 +1,2 @@
 killall waybar
-waybar -c ~/nixos-config/waybar/config.jsonc -s ~/nixos-config/waybar/style.css & disown
+waybar -c ~/config/waybar/config.jsonc -s ~/config/waybar/style.css & disown

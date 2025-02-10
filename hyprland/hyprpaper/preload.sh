@@ -1,9 +1,9 @@
 
 # Directory containing the subdirectories
-PARENT_DIRECTORY="/home/flexksx/nixos-config/backrgrounds"
+PARENT_DIRECTORY="/home/flexksx/config/backrgrounds"
 
 # Output file
-OUTPUT_FILE="/home/flexksx/nixos-config/hyprland/hyprpaper/hyprpaper.conf"
+OUTPUT_FILE="/home/flexksx/config/hyprland/hyprpaper/hyprpaper.conf"
 
 # Clear the output file if it already exists
 > "$OUTPUT_FILE"

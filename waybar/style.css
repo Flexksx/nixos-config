@@ -1,8 +1,8 @@
 /* @import url("file:///home/flexksx/.config/wallust/templates/colors-gtk3.css"); */
 @import url("colors.css");
-@import url("file:///home/flexksx/nixos-config/waybar/modules-right/modules-right-import.css");
-@import url("file:///home/flexksx/nixos-config/waybar/modules-center/modules-center-import.css");
-@import url("file:///home/flexksx/nixos-config/waybar/modules-left/modules-left-import.css");
+@import url("file:///home/flexksx/config/waybar/modules-right/modules-right-import.css");
+@import url("file:///home/flexksx/config/waybar/modules-center/modules-center-import.css");
+@import url("file:///home/flexksx/config/waybar/modules-left/modules-left-import.css");
 
 * {
   /* `otf-font-awesome` is required to be installed for icons */

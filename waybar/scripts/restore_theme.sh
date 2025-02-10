@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Path to the file containing the last wallpaper path
-LAST_WALLPAPER="$HOME/nixos-config/waybar/scripts/active_wallpaper_path.txt"
+LAST_WALLPAPER="$HOME/config/waybar/scripts/active_wallpaper_path.txt"
 
 # Check if the file exists
 if [ ! -f "$LAST_WALLPAPER" ]; then

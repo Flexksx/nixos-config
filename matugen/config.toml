@@ -5,17 +5,17 @@ set = true
 scheme = "dark"
 
 [templates.waybar]
-input_path = '/home/flexksx/nixos-config/matugen/templates/waybar-colors.css'
+input_path = '/home/flexksx/config/matugen/templates/waybar-colors.css'
 output_path = '/home/flexksx/.config/waybar/colors.css'
 
 [templates.gtk3]
-input_path = '/home/flexksx/nixos-config/matugen/templates/gtk-colors.css'
+input_path = '/home/flexksx/config/matugen/templates/gtk-colors.css'
 output_path = '/home/flexksx/.config/gtk-3.0/colors.css'
 
 [templates.gtk4]
-input_path = '/home/flexksx/nixos-config/matugen/templates/gtk-colors.css'
+input_path = '/home/flexksx/config/matugen/templates/gtk-colors.css'
 output_path = '/home/flexksx/.config/gtk-4.0/colors.css'
 
 [templates.ags]
-input_path = '/home/flexksx/nixos-config/matugen/templates/ags.scss'
-output_path = '/home/flexksx/nixos-config/ags/style/colors.scss'
+input_path = '/home/flexksx/config/matugen/templates/ags.scss'
+output_path = '/home/flexksx/config/ags/style/colors.scss'
