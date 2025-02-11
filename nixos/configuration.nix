@@ -19,17 +19,14 @@
     ./hardware-configuration.nix
     ./rgb/openrgb.nix
     ./rgb/razer.nix
-    ./nvidia/nvidia.nix
+    ./nvidia.nix
     ./system_packages.nix
     ./sound.nix
     ./fonts.nix
-    ./users/users.nix
-    ./terminal/zsh.nix
-
-    ./services/auto-cpufreq.nix
-    ./git/git.nix
-    ./programs/hyprland/hyprland.nix
-    ./programs/spicetify.nix
+    ./users.nix
+    ./zsh.nix
+    ./bluetooth.nix
+    ./auto-cpufreq.nix
   ];
   nixpkgs = {
     # You can add overlays here
@@ -78,17 +75,11 @@
   programs.steam.enable = true;
   services.udev.packages = [ pkgs.android-udev-rules ];
   virtualisation.docker.enable = true;
+
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-    settings = {
-      General = {
-        Enable = "Source,Sink,Media,Socket";
-      };
-    };
-  };
+  programs.hyprland.enable = true;
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ ];
   systemd.user.services.mpris-proxy = {

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source directory containing your custom fonts
-SOURCE_DIR="/home/flexksx/config/fonts"
+SOURCE_DIR="/home/flexksx/nixos-config/fonts"
 
 # Destination directory for system fonts
 DEST_DIR="/usr/share/fonts"

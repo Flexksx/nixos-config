@@ -1,1 +1,1 @@
-/home/flexksx/config/backrgrounds/light/CherryBlossomSky.jpg
+/home/flexksx/nixos-config/backrgrounds/dark/GreekStatueDark.png

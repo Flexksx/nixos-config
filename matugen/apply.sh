@@ -1,1 +1,1 @@
-cp -r ~/config/matugen/* ~/.config/matugen/
+cp -r ~/nixos-config/matugen/* ~/.config/matugen/

@@ -8,26 +8,28 @@
   imports = [
     ./appearance.nix
     ./binds.nix
+    ./hyprlock.nix
     ./monitors.nix
     ./startup.nix
-
+    ./plugins.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig = "";
     systemd.enable = true;
-    # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    # portalPackage =
-    #   inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    #    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
-    plugins = [
-      pkgs.hyprlandPlugins.hyprexpo
-    ];
     settings = {
       env = [
         "QT_QPA_PLATFORMTHEME,qt5ct "
         "XDG_SESSION_TYPE,wayland"
         "ELECTRON_OZONE_PLATFORM_HINT, auto"
+        "LIBVA_DRIVER_NAME, nvidia"
+        "NVD_BACKEND, direct"
+        "__GLX_VENDOR_LIBRARY_NAME, nvidia"
+        "GDM_BACKEND, nvidia-drm"
+        "HYPRCURSOR_THEME, McMojave"
+        "HYPRCURSOR_SIZE, 36"
       ];
       cursor = {
         no_hardware_cursors = true;

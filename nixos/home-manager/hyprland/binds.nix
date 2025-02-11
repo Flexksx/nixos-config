@@ -12,6 +12,10 @@
     "$menu" = "rofi -show drun";
     "$browser" = "google-chrome-stable";
     "$editor" = "code";
+    bindm = [
+
+      "$mod, mouse:272, movewindow"
+    ];
     bind =
       [
         # Apps
@@ -20,13 +24,16 @@
         "$mod, R, exec, $menu"
         "$mod, B, exec, $browser"
         "$mod, F, exec, $editor"
-        "$mod, Z, exec, $editor /home/ccretu/config/"
+        "$mod, Z, exec, $editor /home/flexksx/nixos-config/"
         "$mod, P, pseudo"
         "$mod, J, togglesplit"
 
         # Window management
         "$mod, C, killactive"
         "$mod, V, togglefloating"
+
+        # Hyprexpo
+        "$mod, grave, hyprexpo:expo, toggle"
 
         # Media keys
         ", XF86AudioNext, exec, playerctl next"
@@ -43,25 +50,24 @@
         ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
 
         # Lock screen
-        "$mod, L, exec, hyprlock -c /home/ccretu/config/hyprland/hyprlock.conf"
+        "$mod, L, exec, hyprlock -c /home/flexksx/nixos-config/hyprland/hyprlock.conf"
 
         # Restart Waybar
-        "$mod SHIFT, W, exec, /home/ccretu/config/waybar/restart.sh"
+        "$mod SHIFT, W, exec, /home/flexksx/nixos-config/waybar/restart.sh"
       ]
       ++ (
-
-        # Workspaces - $mod + [shift +] {0..9}
+        # Workspaces - mod + {1..9} for switching and mod + shift + {1..9} for moving windows
         builtins.concatLists (
           builtins.genList (
             i:
             let
-              ws = i + 1;
+              ws = toString (i + 1);
             in
             [
-              "$mod, ${toString ws}, workspace, ${toString ws}"
-              "$mod SHIFT, ${toString ws}, movetoworkspace, ${toString ws}"
+              "$mod, ${ws}, workspace, ${ws}"
+              "$mod SHIFT, ${ws}, movetoworkspace, ${ws}"
             ]
-          ) 10
+          ) 9
         )
       )
       ++ (
@@ -77,11 +83,7 @@
         [
           "$mod, mouse_down, workspace, e+1"
           "$mod, mouse_up, workspace, e-1"
-        ])
-      ++ (
-        # Window resize
-        [
-          "$mod, mouse:272, movewindow"
         ]);
+
   };
 }

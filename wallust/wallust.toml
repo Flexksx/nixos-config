@@ -85,13 +85,13 @@ palette = "dark"
 #zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
 colors-kitty = { src = 'colors-kitty.conf', dst = '~/.config/wallust/dist/colors-kitty.conf' }
 colors-gtk3 = { src = 'colors-gtk3.css', dst = '~/.config/wallust/dist/colors-gtk3.css' }
-waybar-colors = { src = 'waybar-colors.css', dst = '~/config/waybar/colors.css' }
+waybar-colors = { src = 'waybar-colors.css', dst = '~/nixos-config/waybar/colors.css' }
 colors-hyprland = { src = 'colors-hyprland.css', dst = '~/.config/wallust/dist/colors-hyprland.css' }
-hyprland-borders = { src = 'hyprland-borders.conf', dst = '~/config/hyprland/hyprland-borders.conf' }
+hyprland-borders = { src = 'hyprland-borders.conf', dst = '~/nixos-config/hyprland/hyprland-borders.conf' }
 colors-rofi_dark_rasi = { src = 'colors-rofi-dark.rasi', dst = '~/.config/wallust/dist/colors-rofi-dark.rasi' }
-# colors_gtk3 = { template = 'colors-gtk3.css', target = '~/config/wal/templates/colors-gtk3.css' }
+# colors_gtk3 = { template = 'colors-gtk3.css', target = '~/nixos-config/wal/templates/colors-gtk3.css' }
 # colors_hyprland = { template = 'colors-hyprland.css', target = '~nixos-config/wal/templates/colors-hyprland.css' }
-# colors-rofi-dark.rasi = { template = 'colors-rofi-dark.rasi', target = '~/config/wal/templates/colors-rofi-dark.rasi' }
+# colors-rofi-dark.rasi = { template = 'colors-rofi-dark.rasi', target = '~/nixos-config/wal/templates/colors-rofi-dark.rasi' }
 # OPTIONALLY It can accept `new_engine = true`: This "new engine" difers by using  double brackets like `{{variable}}`
 # instead of one like usual, which helps with file formats that use brackets like json. With the `new_engine` enabled
 # you can escape and produce a literal `{{` by `{{{{}}`, and for `}}` you escape it with `{{}}}}`.

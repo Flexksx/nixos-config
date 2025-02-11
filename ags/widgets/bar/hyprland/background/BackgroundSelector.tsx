@@ -67,7 +67,7 @@ function WallpaperSelectorOverlay({ wallpapers }: WallpaperSelectorOverlayProps)
 }
 
 export default function WallpaperSelectorButton() {
-    const hyprpaperConfigPath = "/home/flexksx/config/hyprland/hyprpaper/hyprpaper.conf";
+    const hyprpaperConfigPath = "/home/flexksx/nixos-config/hyprland/hyprpaper/hyprpaper.conf";
     const hyprpaperConfig = readFile(hyprpaperConfigPath)
         .split("\n")
         .filter((line) => line !== "")

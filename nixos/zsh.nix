@@ -23,10 +23,25 @@
     };
     shellAliases = {
       pls = "sudo";
-      update = ''
-        sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --flake /home/flexksx/config/nixos#nixos
-        home-manager switch --flake /home/flexksx/config/nixos/#flexksx@nixos -b backup
+      git-add-config-repo = ''
+        cd 
+        cd nixos-config
+        git add *
+        cd
       '';
+      updflk = ''
+        git-add-config-repo 
+        sudo nixos-rebuild switch --flake ~/nixos-config/nixos/#nixos
+      '';
+      updhm = ''
+        git-add-config-repo 
+        home-manager switch --flake ~/nixos-config/nixos#flexksx@nixos -b backup
+      '';
+      updall = ''
+        updflk
+        updhm
+      '';
+
     };
     ohMyZsh = {
       enable = true;
