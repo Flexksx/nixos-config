@@ -1,0 +1,65 @@
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
+{
+  home.packages = with pkgs; [
+    spotify-player
+    bastet
+    ranger
+    wget
+    vscode
+    waybar
+    python312
+    direnv
+    postman
+    cmake
+    cpio
+    meson
+    nautilus
+    lxappearance
+    lolcat
+    killall
+    wl-clipboard
+    cmatrix
+    jq
+    lm_sensors
+    jetbrains.idea-ultimate
+    fh
+    glib
+    fragments
+    cbonsai
+    pass
+    nodejs_18
+    hyprpaper
+    libreoffice-qt
+    hunspell
+    cava
+    libnotify
+    pciutils
+    zip
+    bat
+    p7zip
+    brightnessctl
+    appimage-run
+    networkmanagerapplet
+    playerctl
+    discord
+    grim
+    slurp
+    imv
+    mpv
+    pavucontrol
+    greetd.tuigreet
+    neofetch
+    wallust
+    slack
+    telegram-desktop
+    resonance
+    inputs.matugen.packages.${system}.default
+    inputs.mcmojave-hyprcursor.packages.${pkgs.stdenv.hostPlatform.system}.default
+    hyprland-autoname-workspaces
+  ];
+}

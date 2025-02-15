@@ -1,0 +1,22 @@
+/* Focused window styling */
+#window {
+  transition-duration: 100ms;
+  transition-property: all;
+  color: #ffffff;
+  padding: 0px 5px 0px 10px;
+  background-color: @color2;
+  border-radius: 0px 0px 0px 24px;
+}
+
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+windows#waybar.empty #window {
+  background-color: transparent;
+}
+
+window#waybar.empty {
+  background-color: transparent;
+}

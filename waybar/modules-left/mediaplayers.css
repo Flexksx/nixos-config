@@ -1,0 +1,7 @@
+#custom-mediaplayers {
+  background-color: @color3;
+  border-bottom-right-radius: 24px;
+  border-top-right-radius: 24px;
+  color: #ffffff;
+  padding: 0px 5px 0px 10px;
+}

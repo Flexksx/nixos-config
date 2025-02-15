@@ -1,0 +1,47 @@
+# system_packages.nix
+{ config, pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [
+    home-manager
+    gnupg
+    jq
+    pkgs.gedit
+    lsof
+    slack
+    polkit
+    nwg-look
+    firefox
+    git-credential-manager
+    git
+    gnumake
+    killall
+    wlr-randr
+    pass
+    clang
+    cmake
+    gsettings-desktop-schemas
+    nixfmt-rfc-style
+    unzip
+    unrar
+    libnotify
+    glib
+    openrgb-with-all-plugins
+    pinentry
+    pciutils
+    wireguard-tools
+    ffmpeg
+    bat
+    pkg-config
+    p7zip
+    file-roller
+    zip
+    meson
+    hyprpicker
+    ninja
+    brightnessctl
+    networkmanagerapplet
+    imv
+    mpv
+    wallust
+  ];
+}

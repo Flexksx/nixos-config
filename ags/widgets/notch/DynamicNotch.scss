@@ -1,0 +1,52 @@
+@use "../../style/colors.scss" as *;
+
+.bar-dynamic-notch {
+    min-width: 300px;
+    min-height: 30px;
+    background-color: $on_primary_fixed;
+    color: $primary_fixed;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+window.DynamicNotch{
+    color: transparent;
+    background: transparent;
+}
+
+
+.dynamic-notch-button{
+    background: transparent;
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 24px;
+    border: 0px; 
+    
+}
+
+.dynamic-notch{
+    background-color: black;
+    color: white;
+    border-radius: 0px 0px 24px 24px; 
+    transition: all 250ms ;
+    min-width: 300px;
+    min-height: 30px;
+}
+
+.dynamic-notch.hovered{
+    min-width: 1200px;
+    min-height: 120px;
+}
+
+.current-time{
+    // color: $primary_fixed;
+    font-size: 16px;
+    padding-left: 12px;
+    padding-bottom: 6px;
+}
+
+.dynamic-notch *{
+    transition-duration: 400ms;
+}
