@@ -3,8 +3,12 @@
   pkgs,
   inputs,
   ...
-}: {
-  imports = [inputs.nvf.homeManagerModules.default];
+}:
+{
+  imports = [
+    inputs.nvf.homeManagerModules.default
+    ./nvf/theme.nix
+  ];
   programs.nvf = {
     enable = true;
     settings = {
@@ -65,12 +69,7 @@
           tailwind.enable = false;
           svelte.enable = false;
         };
-        theme = {
-          enable = true;
-          name = "gruvbox";
-          style = "light";
-          transparent = true;
-        };
+
         visuals = {
           nvim-scrollbar.enable = true;
           nvim-web-devicons.enable = true;

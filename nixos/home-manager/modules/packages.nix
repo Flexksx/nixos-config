@@ -1,11 +1,11 @@
 {
-  config,
   pkgs,
   inputs,
   ...
 }:
 {
   home.packages = with pkgs; [
+    btop
     spotify-player
     bastet
     ranger
@@ -14,17 +14,18 @@
     waybar
     python312
     direnv
+    google-chrome
     postman
     cmake
     cpio
     meson
     nautilus
-    lxappearance
     lolcat
     killall
     wl-clipboard
     cmatrix
     jq
+    openrgb-with-all-plugins
     lm_sensors
     jetbrains.idea-ultimate
     fh
@@ -33,7 +34,6 @@
     cbonsai
     pass
     nodejs_18
-    hyprpaper
     libreoffice-qt
     hunspell
     cava
@@ -47,8 +47,6 @@
     networkmanagerapplet
     playerctl
     discord
-    grim
-    slurp
     imv
     mpv
     pavucontrol
@@ -58,8 +56,6 @@
     slack
     telegram-desktop
     resonance
-    inputs.matugen.packages.${system}.default
-    inputs.mcmojave-hyprcursor.packages.${pkgs.stdenv.hostPlatform.system}.default
-    hyprland-autoname-workspaces
+
   ];
 }

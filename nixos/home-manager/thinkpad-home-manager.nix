@@ -10,7 +10,6 @@
 }:
 {
   imports = [
-    ./modules/ags.nix
     ./modules/git.nix
     ./modules/gtk.nix
     ./modules/hyprland.nix
@@ -24,7 +23,6 @@
     ./modules/rofi.nix
     ./modules/spicetify.nix
     ./modules/stylix.nix
-    ./modules/swaync.nix
     ./modules/systemd.nix
     ./modules/zathura.nix
 

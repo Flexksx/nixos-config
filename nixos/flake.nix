@@ -17,10 +17,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    hypr-darkwindow = {
-      url = "github:micha4w/Hypr-DarkWindow/tags/v0.36.0";
-      inputs.hyprland.follows = "hyprland";
-    };
+
     hyprgrass = {
       url = "github:horriblename/hyprgrass";
       inputs.hyprland.follows = "hyprland"; # IMPORTANT

@@ -455,28 +455,6 @@
         "type": "github"
       }
     },
-    "hypr-darkwindow": {
-      "inputs": {
-        "hyprland": [
-          "hyprland"
-        ],
-        "nix-filter": "nix-filter"
-      },
-      "locked": {
-        "lastModified": 1709113015,
-        "narHash": "sha256-7vZADY1ccbRTG9V/IgxKJodPpGgNdaORNItsbDwcarI=",
-        "owner": "micha4w",
-        "repo": "Hypr-DarkWindow",
-        "rev": "7eb7e04dea8cb92f22b7c2df4c78d4f29e28643d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "micha4w",
-        "ref": "tags/v0.36.0",
-        "repo": "Hypr-DarkWindow",
-        "type": "github"
-      }
-    },
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
@@ -899,21 +877,6 @@
         "type": "github"
       }
     },
-    "nix-filter": {
-      "locked": {
-        "lastModified": 1705332318,
-        "narHash": "sha256-kcw1yFeJe9N4PjQji9ZeX47jg0p9A0DuU4djKvg1a7I=",
-        "owner": "numtide",
-        "repo": "nix-filter",
-        "rev": "3449dc925982ad46246cfc36469baf66e1b64f17",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "nix-filter",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1737062831,
@@ -1107,7 +1070,6 @@
       "inputs": {
         "ags": "ags",
         "home-manager": "home-manager",
-        "hypr-darkwindow": "hypr-darkwindow",
         "hyprgrass": "hyprgrass",
         "hyprland": "hyprland",
         "hyprpanel": "hyprpanel",

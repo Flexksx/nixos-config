@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     home-manager
     gnupg
-    jq
     pkgs.gedit
     lsof
     slack
@@ -25,7 +24,6 @@
     unrar
     libnotify
     glib
-    openrgb-with-all-plugins
     pinentry
     pciutils
     wireguard-tools
@@ -36,9 +34,7 @@
     file-roller
     zip
     meson
-    hyprpicker
     ninja
-    brightnessctl
     networkmanagerapplet
     imv
     mpv

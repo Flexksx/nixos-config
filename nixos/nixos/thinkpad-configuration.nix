@@ -91,8 +91,6 @@
     allowedUDPPortRanges = allowedTCPPortRanges;
   };
 
-  programs.thunar.enable = true;
-
   services.xserver.enable = true;
   services.xserver.xkb.layout = "us";
   services.xserver.videoDrivers = [ "modesetting" ];

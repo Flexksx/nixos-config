@@ -1,1 +1,0 @@
-sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch -I nixos-config=/home/flexksx/nixos-config/nixos/configuration.nix --flake /home/flexksx/nixos-config/nixos#nixos

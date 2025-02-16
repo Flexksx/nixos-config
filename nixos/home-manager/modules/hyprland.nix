@@ -10,13 +10,14 @@
     ./hyprland/binds.nix
     ./hyprland/hyprlock.nix
     ./hyprland/plugins.nix
+    ./hyprland/hyprlock.nix
+    ./hyprland/hypridle.nix
     ./hyprland/hyprpanel.nix
+    ./hyprland/hyprland_packages.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig = "";
-    systemd.enable = true;
-    #    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
     settings = {
       env = [
@@ -45,6 +46,9 @@
         name = "epic-mouse-v1";
         sensitivity = -0.5;
       };
+      layerrule = [
+        "noanim, hyprnotch"
+      ];
     };
   };
 }

@@ -15,6 +15,17 @@
         grace = 0;
         disable_loading_bar = true;
       };
+
+      label = [
+        {
+          text = ''cmd[update:1000] echo "<span>$(date +"%I:%M")</span>'';
+          font_size = 40;
+          position = ''240,240'';
+          halign = "left";
+          valign = "center";
+        }
+      ];
+
       input-field = {
         size = ''250, 60'';
         outline_thickness = 2;

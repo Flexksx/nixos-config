@@ -1,1 +1,1 @@
-/home/flexksx/nixos-config/backrgrounds/light/RazerAbstractOrange.jpg
+/home/flexksx/nixos-config/backrgrounds/light/Windows.jpg
