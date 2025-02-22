@@ -1,9 +1,7 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   stylix = {
     enable = true;
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-light-soft.yaml";
-    image = ../../../backrgrounds/dark/Magnolia.jpg;
+    image = ../../../backrgrounds/gradient/razer-purple-blue.png;
     polarity = "dark";
     fonts = {
       serif = {
