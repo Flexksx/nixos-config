@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   stylix = {
     enable = true;
-    image = ../../../backrgrounds/gradient/razer-purple-blue.png;
-    polarity = "dark";
+    image = ../../../backrgrounds/gradient/pink-blue.jpg;
+    polarity = "light";
     fonts = {
       serif = {
         package = pkgs.noto-fonts;

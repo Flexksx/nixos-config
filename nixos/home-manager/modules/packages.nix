@@ -2,8 +2,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   home.packages = with pkgs; [
     btop
     spotify-player
@@ -56,6 +55,5 @@
     slack
     telegram-desktop
     resonance
-
   ];
 }
