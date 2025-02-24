@@ -1,2 +1,2 @@
 # nixos-config
-My dotfiles for my Hyprland system on Arch Linux btw
+My dotfiles for my Hyprland system on NixOS
