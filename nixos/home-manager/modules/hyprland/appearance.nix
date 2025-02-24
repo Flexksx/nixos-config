@@ -32,6 +32,10 @@
       };
 
     };
+    windowrulev2 = [
+      "opacity 0.95 0.95, class:^(code)$"
+      "opacity 0.95 0.95, class:^(spotify)$"
+    ];
 
     animations = {
       enabled = "yes";
